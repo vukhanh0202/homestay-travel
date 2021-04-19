@@ -1,7 +1,5 @@
 import React from 'react';
 import Images from '../../../../constants/images';
-import FormBooking from '../../components/FormBooking';
-import Slider from '../../components/Slider';
 import './styles.scss';
 
 

@@ -4,18 +4,16 @@ import OwlCarousel from 'react-owl-carousel';
 import Images from '../../../../constants/images';
 import './styles.scss';
 
-Slider.propTypes = {
+SliderBanner.propTypes = {
 
 };
 
-function Slider() {
+function SliderBanner() {
     useEffect(() => {
-
         $('.set-bg').each(function () {
             var bg = $(this).data('setbg');
             $(this).css('background-image', 'url(' + bg + ')');
         });
-
     }, [])
 
     return (
@@ -28,4 +26,4 @@ function Slider() {
     );
 }
 
-export default Slider;
+export default SliderBanner;

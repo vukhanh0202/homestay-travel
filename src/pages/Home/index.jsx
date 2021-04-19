@@ -1,8 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './styles.scss';
-import HomeBanner from './mains/HomeBanner';
 import HomeAboutUs from './mains/HomeAboutUs';
+import HomeBanner from './mains/HomeBanner';
+import HomeBlog from './mains/HomeBlog';
+import HomeRoom from './mains/HomeRoom';
+import HomeService from './mains/HomeService';
+import HomeTestimonials from './mains/HomeTestimonials';
+import './styles.scss';
 
 Home.propTypes = {
 
@@ -13,6 +16,10 @@ function Home(props) {
         <div>
             <HomeBanner />
             <HomeAboutUs />
+            <HomeService />
+            <HomeRoom />
+            <HomeTestimonials />
+            <HomeBlog />
         </div>
     );
 }

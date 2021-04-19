@@ -1,0 +1,38 @@
+.testimonial-slider.owl-carousel {
+    .owl-item {
+        img {
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+    .owl-nav {
+        button {
+            height: 44px;
+            width: 44px;
+            border: 1px solid #ebebeb;
+            font-size: 24px;
+            color: #707079;
+            background: #ffffff;
+            line-height: 48px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            left: -190px;
+            top: 50%;
+            -webkit-transform: translateY(-6px);
+            -ms-transform: translateY(-6px);
+            transform: translateY(-6px);
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            &:hover {
+                border-color: #19191a;
+                color: #19191a;
+            }
+        }
+        button.owl-next {
+            left: auto;
+            right: -190px;
+        }
+    }
+}

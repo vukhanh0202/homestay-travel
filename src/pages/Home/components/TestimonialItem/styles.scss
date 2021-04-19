@@ -1,0 +1,26 @@
+.testimonial-slider {
+    .ts-item {
+        text-align: center;
+        p {
+            font-size: 20px;
+            color: #707079;
+            line-height: 30px;
+            margin-bottom: 50px;
+        }
+        .ti-author {
+            margin-bottom: 60px;
+            .rating {
+                display: inline-block;
+                i {
+                    color: #f5b917;
+                    font-size: 16px;
+                }
+            }
+            h5 {
+                font-size: 20px;
+                color: #19191a;
+                display: inline-block;
+            }
+        }
+    }
+}

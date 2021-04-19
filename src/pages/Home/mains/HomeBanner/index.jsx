@@ -1,6 +1,6 @@
 import React from 'react';
 import FormBooking from '../../components/FormBooking';
-import Slider from '../../components/Slider';
+import SliderBanner from '../../components/SliderBanner';
 import './styles.scss';
 
 
@@ -28,7 +28,7 @@ function HomeBanner() {
                     </div>
                 </div>
             </div>
-            <Slider />
+            <SliderBanner />
         </section>
     );
 }
