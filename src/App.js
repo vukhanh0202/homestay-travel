@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
 import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header';
 import jQuery from 'jquery';
+import Footer from './components/Footer';
 
 
 const Home = React.lazy(() => import('./pages/Home/index'));
@@ -26,8 +27,7 @@ function App() {
                     </Switch>
                 </BrowserRouter>
             </Suspense>
-
-
+            <Footer />
         </div>
     );
 }
