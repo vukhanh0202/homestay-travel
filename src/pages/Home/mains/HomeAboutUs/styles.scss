@@ -1,0 +1,22 @@
+.about-text {
+    text-align: center;
+    padding: 0 35px;
+    p {
+        color: #595960;
+        font-weight: 500;
+    }
+    p.f-para {
+        margin-bottom: 10px;
+    }
+    p.s-para {
+        margin-bottom: 35px;
+    }
+    .about-btn {
+        color: #19191a;
+    }
+}
+.about-pic {
+    img {
+        min-width: 100%;
+    }
+}
