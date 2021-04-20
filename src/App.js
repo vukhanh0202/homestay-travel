@@ -6,6 +6,8 @@ import Header from './components/Header';
 import jQuery from 'jquery';
 import Footer from './components/Footer';
 import Rooms from './pages/Rooms';
+import AboutUs from './pages/AboutUs';
+import Blogs from './pages/Blogs';
 
 
 const Home = React.lazy(() => import('./pages/Home/index'));
@@ -23,7 +25,7 @@ function App() {
                     </ul>
                     <Switch>
                         <Redirect exact from="/" to="/home"></Redirect>
-                        <Route exact path="/home" component={Rooms}></Route>
+                        <Route exact path="/home" component={Blogs}></Route>
                         <Route component={NotFound}></Route>
                     </Switch>
                 </BrowserRouter>

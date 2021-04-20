@@ -1,0 +1,18 @@
+.about-page-services {
+    .ap-service-item {
+        position: relative;
+        height: 420px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        .api-text {
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+            width: 100%;
+            text-align: center;
+            h3 {
+                color: #ffffff;
+            }
+        }
+    }
+}

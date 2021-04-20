@@ -1,0 +1,20 @@
+.video-section {
+    height: 500px;
+    padding-top: 140px;
+    .video-text {
+        text-align: center;
+        h2 {
+            font-size: 48px;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .play-btn {
+            display: inline-block;
+        }
+    }
+}

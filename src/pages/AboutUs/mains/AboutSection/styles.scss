@@ -1,0 +1,32 @@
+.aboutus-page-section {
+    padding-top: 0;
+    padding-bottom: 70px;
+}
+.about-page-text {
+    margin-bottom: 65px;
+    .ap-title {
+        margin-bottom: 30px;
+        h2 {
+            font-size: 44px;
+            color: #19191a;
+            margin-bottom: 18px;
+        }
+        p {
+            font-size: 18px;
+            color: #707079;
+            line-height: 28px;
+        }
+    }
+    .ap-services {
+        li {
+            list-style: none;
+            font-size: 20px;
+            color: #707079;
+            line-height: 42px;
+            i {
+                color: #dfa974;
+                margin-right: 5px;
+            }
+        }
+    }
+}
