@@ -1,0 +1,44 @@
+.room-item {
+    margin-bottom: 30px;
+    img {
+        min-width: 100%;
+    }
+    .ri-text {
+        border: 1px solid #ebebeb;
+        border-top: none;
+        padding: 24px 24px 30px 28px;
+        h4 {
+            color: #19191a;
+            margin-bottom: 17px;
+        }
+        h3 {
+            color: #dfa974;
+            font-weight: 700;
+            margin-bottom: 14px;
+            span {
+                font-family: "Cabin", sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                color: #19191a;
+            }
+        }
+        table {
+            margin-bottom: 18px;
+            tbody {
+                tr {
+                    td {
+                        font-size: 16px;
+                        color: #707079;
+                        line-height: 36px;
+                    }
+                    td.r-o {
+                        width: 125px;
+                    }
+                }
+            }
+        }
+        .primary-btn {
+            color: #19191a;
+        }
+    }
+}

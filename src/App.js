@@ -5,6 +5,7 @@ import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header';
 import jQuery from 'jquery';
 import Footer from './components/Footer';
+import Rooms from './pages/Rooms';
 
 
 const Home = React.lazy(() => import('./pages/Home/index'));
@@ -22,7 +23,7 @@ function App() {
                     </ul>
                     <Switch>
                         <Redirect exact from="/" to="/home"></Redirect>
-                        <Route exact path="/home" component={Home}></Route>
+                        <Route exact path="/home" component={Rooms}></Route>
                         <Route component={NotFound}></Route>
                     </Switch>
                 </BrowserRouter>

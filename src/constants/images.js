@@ -7,6 +7,12 @@ import slideBanner3 from '../assets/img/hero/hero-3.jpg';
 import about1 from '../assets/img/about/about-1.jpg';
 import about2 from '../assets/img/about/about-2.jpg';
 
+import room1 from '../assets/img/room/room-1.jpg';
+import room2 from '../assets/img/room/room-2.jpg';
+import room3 from '../assets/img/room/room-3.jpg';
+import room4 from '../assets/img/room/room-4.jpg';
+import room5 from '../assets/img/room/room-5.jpg';
+import room6 from '../assets/img/room/room-6.jpg';
 import roomB1 from '../assets/img/room/room-b1.jpg';
 import roomB2 from '../assets/img/room/room-b2.jpg';
 import roomB3 from '../assets/img/room/room-b3.jpg';
@@ -35,6 +41,12 @@ const Images = {
     ABOUT_2: about2,
 
     // Image Home Room
+    ROOM_1: room1,
+    ROOM_2: room2,
+    ROOM_3: room3,
+    ROOM_4: room4,
+    ROOM_5: room5,
+    ROOM_6: room6,
 
     ROOM_B1: roomB1,
     ROOM_B2: roomB2,
