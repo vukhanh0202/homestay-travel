@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import ServiceItem from './../../components/ServiceItem/index';
 import './styles.scss';
-import ServiceItem from './../../components/ServiceItem/index'
 
 
 HomeService.propTypes = {

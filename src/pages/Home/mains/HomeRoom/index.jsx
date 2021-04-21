@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './styles.scss';
-import ServiceItem from './../../components/ServiceItem/index'
-import RoomItem from '../../components/RoomItem';
 import Images from '../../../../constants/images';
+import RoomItem from '../../components/RoomItem';
+import './styles.scss';
 
 
 HomeRoom.propTypes = {

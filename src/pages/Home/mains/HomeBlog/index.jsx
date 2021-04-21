@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Images from '../../../../constants/images';
 import BlogItem from '../../components/BlogItem';
-import SliderTestimonials from '../../components/SliderTestimonials';
 import './styles.scss';
 
 HomeBlog.propTypes = {

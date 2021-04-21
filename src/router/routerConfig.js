@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router";
 import NotFound from "../components/NotFound/NotFound";
+import RoomsContainer from "../containers/RoomsContainer";
 import AboutUs from "../pages/AboutUs";
 import Blogs from "../pages/Blogs";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
-import Rooms from "../pages/Rooms";
 
 const ROUTES = [
     { path: "/", key: "HOME", display: "Home", exact: true, component: Home },
@@ -13,7 +13,7 @@ const ROUTES = [
         path: "/rooms",
         key: "ROOMS",
         display: "Rooms",
-        component: Rooms
+        component: RoomsContainer
         // component: RenderRoutes,
         // routes: [
         //     {

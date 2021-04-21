@@ -14,17 +14,17 @@ function Footer() {
                         <div className="col-lg-4">
                             <div className="ft-about">
                                 <div className="logo">
-                                    <a href="#">
+                                    <a>
                                         <img src="img/footer-logo.png" alt="" />
                                     </a>
                                 </div>
                                 <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
                                 <div className="fa-social">
-                                    <a href="#"><i className="fa fa-facebook" /></a>
-                                    <a href="#"><i className="fa fa-twitter" /></a>
-                                    <a href="#"><i className="fa fa-tripadvisor" /></a>
-                                    <a href="#"><i className="fa fa-instagram" /></a>
-                                    <a href="#"><i className="fa fa-youtube-play" /></a>
+                                    <a><i className="fa fa-facebook" /></a>
+                                    <a><i className="fa fa-twitter" /></a>
+                                    <a><i className="fa fa-tripadvisor" /></a>
+                                    <a><i className="fa fa-instagram" /></a>
+                                    <a><i className="fa fa-youtube-play" /></a>
                                 </div>
                             </div>
                         </div>
@@ -56,10 +56,10 @@ function Footer() {
                     <div className="row">
                         <div className="col-lg-7">
                             <ul>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Terms of use</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Environmental Policy</a></li>
+                                <li><a >Contact</a></li>
+                                <li><a >Terms of use</a></li>
+                                <li><a>Privacy</a></li>
+                                <li><a>Environmental Policy</a></li>
                             </ul>
                         </div>
                         <div className="col-lg-5">

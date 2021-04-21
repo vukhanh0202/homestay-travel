@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './styles.scss';
-import Images from '../../constants/images';
-import MobileMenu from './components/MobileMenu';
 import DesktopMenu from './components/DesktopMenu';
+import MobileMenu from './components/MobileMenu';
+import './styles.scss';
 
 Header.propTypes = {
 

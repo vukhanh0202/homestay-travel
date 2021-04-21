@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink, useRouteMatch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Images from '../../../../constants/images';
 import ROUTES, { RenderRoutes } from '../../../../router/routerConfig';
 import Search from '../../../Search';
 import './styles.scss';
-
-DesktopMenu.propTypes = {
-
-};
 
 function DesktopMenu(props) {
 

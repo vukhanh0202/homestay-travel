@@ -1,7 +1,5 @@
-import $ from 'jquery';
-import React, { useEffect } from 'react';
+import React from 'react';
 import './styles.scss';
-import Select from 'react-select';
 
 function RoomItem(props) {
     return (

@@ -1,7 +1,5 @@
-import $ from 'jquery';
-import React, { useEffect } from 'react';
+import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import Images from '../../../../constants/images';
 import TestimonialItem from '../TestimonialItem';
 import './styles.scss';
 

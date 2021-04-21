@@ -1,7 +1,6 @@
-import $ from 'jquery';
-import React, { useEffect } from 'react';
-import './styles.scss';
+import React from 'react';
 import Select from 'react-select';
+import './styles.scss';
 
 function FormBooking() {
     // useEffect(() => {

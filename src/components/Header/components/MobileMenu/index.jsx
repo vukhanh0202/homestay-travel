@@ -1,5 +1,4 @@
-import $ from 'jquery';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Images from '../../../../constants/images';
 import './styles.scss';
 

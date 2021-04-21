@@ -32,11 +32,6 @@
 
 
 
-    /*------------------
-        Navigation
-    --------------------*/
-
-
 
     /*------------------
         Magnific Popup
@@ -45,13 +40,7 @@
         type: 'iframe'
     });
 
-    /*------------------
-        Date Picker
-    --------------------*/
-    $(".date-input").datepicker({
-        minDate: 0,
-        dateFormat: 'dd MM, yy'
-    });
+
 
 
 })(jQuery);

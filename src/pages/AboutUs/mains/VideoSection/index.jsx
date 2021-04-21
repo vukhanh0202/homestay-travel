@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
 import $ from 'jquery';
-import './styles.scss';
+import React, { useEffect } from 'react';
 import Images from '../../../../constants/images';
+import './styles.scss';
 
 VideoSection.propTypes = {
 

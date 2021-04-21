@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
 import $ from 'jquery';
+import React, { useEffect } from 'react';
 import './styles.scss';
 
 BlogItem.propTypes = {
