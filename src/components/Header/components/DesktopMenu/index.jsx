@@ -1,13 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './styles.scss';
+import React, { useEffect, useState } from 'react';
+import { Link, NavLink, useRouteMatch } from 'react-router-dom';
 import Images from '../../../../constants/images';
+import ROUTES, { RenderRoutes } from '../../../../router/routerConfig';
+import Search from '../../../Search';
+import './styles.scss';
 
 DesktopMenu.propTypes = {
 
 };
 
-function DesktopMenu() {
+function DesktopMenu(props) {
+
+    const [path, setPath] = useState('');
+    useEffect(() => {
+        props.setContent(() => <RenderRoutes setPath={setPath} routes={ROUTES} />);
+    }, [])
+
     return (
         <div>
             <header className="header-section">
@@ -16,16 +24,14 @@ function DesktopMenu() {
                         <div className="row">
                             <div className="col-lg-6">
                                 <ul className="tn-left">
-                                    <li><i className="fa fa-phone" /> (12) 345 67890</li>
-                                    <li><i className="fa fa-envelope" /> info.colorlib@gmail.com</li>
+                                    <li><i className="fa fa-phone" /> (84) 858 8100 938</li>
+                                    <li><i className="fa fa-envelope" /> ktpm2018@uit.edu.vn</li>
                                 </ul>
                             </div>
                             <div className="col-lg-6">
                                 <div className="tn-right">
                                     <div className="top-social">
                                         <a href="#"><i className="fa fa-facebook" /></a>
-                                        <a href="#"><i className="fa fa-twitter" /></a>
-                                        <a href="#"><i className="fa fa-tripadvisor" /></a>
                                         <a href="#"><i className="fa fa-instagram" /></a>
                                     </div>
                                     <a href="#" className="bk-btn">Booking Now</a>
@@ -57,6 +63,7 @@ function DesktopMenu() {
                             <div className="col-lg-10">
                                 <div className="nav-menu">
                                     <nav className="mainmenu">
+                                        {/*
                                         <ul>
                                             <li className="active"><a href="./index.html">Home</a></li>
                                             <li><a href="./rooms.html">Rooms</a></li>
@@ -72,6 +79,11 @@ function DesktopMenu() {
                                             <li><a href="./blog.html">News</a></li>
                                             <li><a href="./contact.html">Contact</a></li>
                                         </ul>
+                                       
+                                        */}
+
+                                        {displayRouteMenu(ROUTES, path)}
+
                                     </nav>
                                     <div className="nav-right search-switch">
                                         <i className="fa fa-search"></i>
@@ -82,16 +94,47 @@ function DesktopMenu() {
                     </div>
                 </div>
             </header>
-            <div className="search-model">
-                <div className="h-100 d-flex align-items-center justify-content-center">
-                    <div className="search-close-switch"><i className="icon_close"></i></div>
-                    <form className="search-model-form">
-                        <input type="text" id="search-input" placeholder="Search here....." />
-                    </form>
-                </div>
-            </div>
+            <Search />
         </div>
     );
 }
 
 export default DesktopMenu;
+
+/**
+ * Render a nested hierarchy of route configs with unknown depth/breadth
+ */
+function displayRouteMenu(routes, path) {
+
+    /**
+     * Render a single route as a list item link to the config's pathname
+     */
+    function singleRoute(route) {
+        var active = route.path === path ? 'active' : '';
+        return (
+            <li key={route.key} className={active}>
+                <Link to={route.path} > {route.display} </Link>
+            </li>
+        );
+    }
+
+    // loop through the array of routes and generate an unordered list
+    return (
+        <ul>
+            {routes.map(route => {
+                // if this route has sub-routes, then show the ROOT as a list item and recursively render a nested list of route links
+                if (route.routes) {
+                    return (
+                        <React.Fragment key={route.key}>
+                            {singleRoute(route)}
+                            {displayRouteMenu(route.routes)}
+                        </React.Fragment>
+                    );
+                }
+
+                // no nested routes, so just render a single route
+                return singleRoute(route);
+            })}
+        </ul>
+    );
+}

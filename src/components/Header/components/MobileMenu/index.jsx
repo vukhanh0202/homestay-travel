@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './styles.scss';
+import $ from 'jquery';
+import React, { useEffect } from 'react';
 import Images from '../../../../constants/images';
+import './styles.scss';
+
 
 MobileMenu.propTypes = {
 
@@ -9,6 +10,7 @@ MobileMenu.propTypes = {
 
 function MobileMenu() {
     return (
+
         <div>
             {/*Offcanvas Menu Section Begin*/}
             <div className="offcanvas-menu-overlay" />

@@ -4,6 +4,13 @@ import './styles.scss';
 import Select from 'react-select';
 
 function FormBooking() {
+    // useEffect(() => {
+    //     $(".date-input").datepicker({
+    //         minDate: 0,
+    //         dateFormat: 'dd MM, yy'
+    //     });
+    // }, [])
+
     return (
         <div className="booking-form">
             <h3>Booking Your Hotel</h3>
