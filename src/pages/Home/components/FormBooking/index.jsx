@@ -1,14 +1,21 @@
-import React from 'react';
+import $ from 'jquery';
+import React, { useEffect } from 'react';
 import Select from 'react-select';
 import './styles.scss';
+import 'jquery-ui';
+import 'jquery-ui/ui/widgets/datepicker'
 
 function FormBooking() {
-    // useEffect(() => {
-    //     $(".date-input").datepicker({
-    //         minDate: 0,
-    //         dateFormat: 'dd MM, yy'
-    //     });
-    // }, [])
+    useEffect(() => {
+        $(".pick-date .icon_calendar").click(function () {
+            console.log($(this).closest('.pick-date').find('input.date-input'));
+            $(this).closest('.pick-date').find('input.date-input').datepicker({
+                minDate: 0,
+                dateFormat: 'dd MM, yy'
+            });
+            $(this).closest('.pick-date').find('input.date-input').focus();
+        });
+    }, [])
 
     return (
         <div className="booking-form">
@@ -16,13 +23,17 @@ function FormBooking() {
             <form action="#">
                 <div className="check-date">
                     <label htmlFor="date-in">Check In:</label>
-                    <input type="text" className="date-input" id="date-in" />
-                    <i className="icon_calendar" />
+                    <div className='pick-date'>
+                        <input type="text" className="date-input" id="date-in" />
+                        <i className="icon_calendar" />
+                    </div>
                 </div>
                 <div className="check-date">
                     <label htmlFor="date-out">Check Out:</label>
-                    <input type="text" className="date-input" id="date-out" />
-                    <i className="icon_calendar" />
+                    <div className='pick-date'>
+                        <input type="text" className="date-input" id="date-out" />
+                        <i className="icon_calendar" />
+                    </div>
                 </div>
                 <div className="select-option">
                     <label htmlFor="guest">Guests:</label>
