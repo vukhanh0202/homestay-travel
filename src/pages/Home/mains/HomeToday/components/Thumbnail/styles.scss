@@ -1,0 +1,31 @@
+@import "./../../../../../../commons/variable.scss";
+
+.thumnail-today {
+    width: 270px;
+    .img-wrapper {
+        transition: all 0.3s;
+        overflow: hidden;
+        border-radius: 5px;
+        img {
+            transition: all 0.3s;
+        }
+    }
+    .content-wrapper {
+        .content-type {
+            color: $color-gray;
+            font-size: 14px;
+        }
+        .content-name {
+            .name {
+                color: $color-black;
+                font-weight: 400;
+                font-size: 18px;
+            }
+            .price {
+                color: $color-black;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        }
+    }
+}

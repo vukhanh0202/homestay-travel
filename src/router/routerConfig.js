@@ -8,11 +8,11 @@ import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 
 const ROUTES = [
-    { path: "/", key: "HOME", display: "Home", exact: true, component: Home },
+    { path: "/", key: "HOME", display: "Trang Chủ", exact: true, component: Home },
     {
-        path: "/rooms",
+        path: "/cho-o",
         key: "ROOMS",
-        display: "Rooms",
+        display: "Chỗ Ở",
         component: RoomsContainer
         // component: RenderRoutes,
         // routes: [

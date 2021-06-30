@@ -24,7 +24,7 @@ function MobileMenu() {
                     <i className="fa fa-search" />
                 </div>
                 <div className="header-configure-area">
-                    <div className="language-option">
+                    {/*<div className="language-option">
                         <img src={Images.FLAT_US} alt="" />
                         <span>EN <i className="fa fa-angle-down" /></span>
                         <div className="flag-dropdown">
@@ -33,7 +33,7 @@ function MobileMenu() {
                                 <li><a href="#">Fr</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>*/}
                     <a href="#" className="bk-btn">Booking Now</a>
                 </div>
                 <nav className="mainmenu mobile-menu">

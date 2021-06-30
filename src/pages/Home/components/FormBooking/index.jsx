@@ -19,7 +19,7 @@ function FormBooking() {
 
     return (
         <div className="booking-form">
-            <h3>Booking Your Hotel</h3>
+            <h3>Đặt Phòng</h3>
             <form action="#">
                 <div className="check-date">
                     <label htmlFor="date-in">Check In:</label>

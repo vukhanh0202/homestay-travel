@@ -16,15 +16,14 @@ function HomeAboutUs() {
                     <div className="col-lg-6">
                         <div className="about-text">
                             <div className="section-title">
-                                <span>About Us</span>
-                                <h2>Intercontinental LA <br />Westlake Hotel</h2>
+                                <span>Về Chúng Tôi</span>
+                                <h2>Luxury Homestay VN <br />Travel Homestay</h2>
                             </div>
-                            <p className="f-para">Sona.com is a leading online accommodation site. We’re passionate about
-                            travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
-                  languages.</p>
-                            <p className="s-para">So when it comes to booking the perfect hotel, vacation rental, resort,
-                  apartment, guest house, or tree house, we’ve got you covered.</p>
-                            <a href="#" className="primary-btn about-btn">Read More</a>
+                            <p className="f-para">Homestay Travel là một nền tảng kết nối giữa chủ nhà và người thuê nhà (Home-Sharing).
+                                Thông qua Homestay Travel du khách có nhu cầu thuê phòng trọ sẽ liên hệ với những chủ nhà tại địa phương.</p>
+                            <p className="s-para">Các chủ nhà thông qua các căn hộ của mình có thể cho thuê ngắn hạn kiếm tiền một cách dễ dàng. Còn du khách sẽ
+                                được trải nghiệm dịch vụ căn hộ thoải mái và thuận tiện nhất.</p>
+                            <a href="#" className="primary-btn about-btn">Đặt Phòng Ngay</a>
                         </div>
                     </div>
                     <div className="col-lg-6">

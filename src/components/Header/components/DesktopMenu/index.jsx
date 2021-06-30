@@ -30,17 +30,7 @@ function DesktopMenu(props) {
                                         <a href="#"><i className="fa fa-facebook" /></a>
                                         <a href="#"><i className="fa fa-instagram" /></a>
                                     </div>
-                                    <a href="#" className="bk-btn">Booking Now</a>
-                                    <div className="language-option">
-                                        <img src={Images.FLAT_US} alt="" />
-                                        <span>EN <i className="fa fa-angle-down" /></span>
-                                        <div className="flag-dropdown">
-                                            <ul>
-                                                <li><a href="#">Zi</a></li>
-                                                <li><a href="#">Fr</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <a href="#" className="bk-btn">Đăng Nhập</a>
                                 </div>
                             </div>
                         </div>
@@ -59,31 +49,14 @@ function DesktopMenu(props) {
                             <div className="col-lg-10">
                                 <div className="nav-menu">
                                     <nav className="mainmenu">
-                                        {/*
-                                        <ul>
-                                            <li className="active"><a href="./index.html">Home</a></li>
-                                            <li><a href="./rooms.html">Rooms</a></li>
-                                            <li><a href="./about-us.html">About Us</a></li>
-                                            <li><a href="./pages.html">Pages</a>
-                                                <ul className="dropdown">
-                                                    <li><a href="./room-details.html">Room Details</a></li>
-                                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                                    <li><a href="#">Family Room</a></li>
-                                                    <li><a href="#">Premium Room</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="./blog.html">News</a></li>
-                                            <li><a href="./contact.html">Contact</a></li>
-                                        </ul>
-                                       
-                                        */}
-
                                         {displayRouteMenu(ROUTES, path)}
 
                                     </nav>
-                                    <div className="nav-right search-switch">
+                                    {/*
+                                     <div className="nav-right search-switch">
                                         <i className="fa fa-search"></i>
                                     </div>
+                                    */}
                                 </div>
                             </div>
                         </div>

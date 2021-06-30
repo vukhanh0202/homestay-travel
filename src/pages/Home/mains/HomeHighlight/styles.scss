@@ -1,0 +1,26 @@
+.section-highlight {
+    margin: 0px auto;
+    margin-top: 50px;
+    font-family: "Cabin", sans-serif !important;
+    .title-wrapper {
+        // margin: 0 80px;
+    }
+    .row {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        .item {
+            padding: 0 !important;
+            margin: 0 5px;
+            transition: all 0.3s;
+            &:hover {
+                cursor: pointer;
+                transition: all 0.3s;
+                img {
+                    transition: all 0.3s;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

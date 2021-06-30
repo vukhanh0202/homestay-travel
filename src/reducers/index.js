@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import apartments from './apartments';
+import breadcrumbs from './breadcrumbs';
 
 const appReducers = combineReducers({
-    apartments
+    apartments,
+    breadcrumbs
 });
 
 export default appReducers;

@@ -8,15 +8,6 @@ Rooms.propTypes = {
 };
 
 function Rooms(props) {
-    const [breadcrumb, setBreadCrumb] = useState({
-        title: 'Our Rooms',
-        breadcrumb: [
-            {
-                name: 'Home',
-            }
-        ],
-        current: 'Rooms'
-    });
     const elemt = props.apartments.map((item, index) => {
         return <div key={index} className="col-lg-4 col-md-6">
             <RoomItem item={item} />
@@ -24,7 +15,7 @@ function Rooms(props) {
     })
     return (
         <div>
-            <BreadCrumb prop={breadcrumb} />
+            <BreadCrumb prop={props.breadcrumbs} />
             <section className="rooms-section spad">
                 <div className="container">
                     <div className="row">
