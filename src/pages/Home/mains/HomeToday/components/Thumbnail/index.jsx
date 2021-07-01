@@ -1,9 +1,15 @@
 import React from 'react';
 import './styles.scss';
+import { useHistory } from 'react-router-dom';
 
 function ThumbnailToday({ item }) {
+
+    const history = useHistory()
+    const toDetailHome = () => {
+        history.push(`/chi-tiet/${item.id}`, item);
+    }
     return (
-        <div className="thumnail-today">
+        <div className="thumnail-today" onClick={() => toDetailHome()}>
             <div className="img-wrapper">
                 <img className="thumnail-home_item__image" width='100%' height='192px'
                     src={item?.img} />

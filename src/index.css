@@ -8,3 +8,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.disable{
+  display: none!important
+}

@@ -7,7 +7,7 @@ Header.propTypes = {
 
 };
 
-function Header(props) {
+function Header({disableTop}) {
     return (
         <div>
             {/*Offcanvas Menu Section Begin*/}
@@ -15,7 +15,7 @@ function Header(props) {
             {/*Offcanvas Menu Section End*/}
 
             {/*Header Section Begin*/}
-            <DesktopMenu setContent={props.setContent} />
+            <DesktopMenu disableTop={disableTop} />
             {/*Header Section End*/}
         </div>
     );

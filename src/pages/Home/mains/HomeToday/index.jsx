@@ -4,15 +4,11 @@ import Slider from "react-slick";
 import Thumbnail from './components/Thumbnail';
 import ThumbnailToday from './components/Thumbnail';
 import { Apartment } from '../../../../constants/Apartment';
-import { useHistory } from 'react-router-dom';
+
 
 function HomeToday() {
 
     const list = Apartment.slice(0, 8);
-    const history = useHistory()
-    const toDetailHome = () => {
-        history.push(`/chi-tiet/${123}`);
-    }
     return (
         <section className="section-today">
             <div className="container">
@@ -22,8 +18,8 @@ function HomeToday() {
                 </div>
                 <div className="row">
                     {list.map((item, key) => {
-                        return (<div key={key} className="item col-3" onClick>
-                            <ThumbnailToday item={item} onClick={() => toDetailHome()} />
+                        return (<div key={key} className="item col-3">
+                            <ThumbnailToday item={item}  />
                         </div>);
                     })}
                 </div>

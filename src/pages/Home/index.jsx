@@ -17,16 +17,11 @@ Home.propTypes = {
 function Home(props) {
     return (
         <div>
-            <RoomDetail />
-            {/*
             <HomeBanner />
             <HomeHighlight />
             <HomeToday />
             <HomeAboutUs />
-
-
-
-
+            {/*
             <HomeTestimonials />
             <HomeService />
             <HomeRoom />

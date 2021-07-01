@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.scss';
 
 function BreadCrumb(props) {
-    console.log(props);
     const elemts = props.prop.breadcrumb.map((item, index) => {
         return <a key={index}>{item.name}</a>
     })

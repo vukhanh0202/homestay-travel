@@ -1,12 +1,10 @@
 import React from 'react';
 import './styles.scss';
 
-Footer.propTypes = {
-
-};
-
-function Footer() {
+function Footer({disable}) {
     return (
+        {disable} ? ''
+        : 
         <footer className="footer-section">
             <div className="container">
                 <div className="footer-text">

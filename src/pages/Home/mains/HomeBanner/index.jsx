@@ -9,8 +9,6 @@ HomeBanner.propTypes = {
 };
 
 function HomeBanner() {
-
-
     return (
         <section className="hero-section">
             <div className="container">

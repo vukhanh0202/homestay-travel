@@ -13,26 +13,21 @@ function Contact(props) {
                 <div className="row">
                     <div className="col-lg-4">
                         <div className="contact-text">
-                            <h2>Contact Info</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                  labore et dolore magna aliqua.</p>
+                            <h2>Thông tin liên lạc</h2>
+                            <p>Website cho thuê homestay với chất lượng uy tín, hàng đầu.</p>
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td className="c-o">Address:</td>
-                                        <td>856 Cordia Extension Apt. 356, Lake, US</td>
+                                        <td className="c-o">Địa chỉ:</td>
+                                        <td>ĐH CNTT, Linh Trung, Thủ Đức, TP.HCM</td>
                                     </tr>
                                     <tr>
-                                        <td className="c-o">Phone:</td>
-                                        <td>(12) 345 67890</td>
+                                        <td className="c-o">SĐT</td>
+                                        <td>(84) 858 8100 938</td>
                                     </tr>
                                     <tr>
                                         <td className="c-o">Email:</td>
-                                        <td>info.colorlib@gmail.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="c-o">Fax:</td>
-                                        <td>+(12) 345 67890</td>
+                                        <td>ktpm2018@uit.edu.vn</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -42,21 +37,21 @@ function Contact(props) {
                         <form action="#" className="contact-form">
                             <div className="row">
                                 <div className="col-lg-6">
-                                    <input type="text" placeholder="Your Name" />
+                                    <input type="text" placeholder="Họ Và tên" />
                                 </div>
                                 <div className="col-lg-6">
-                                    <input type="text" placeholder="Your Email" />
+                                    <input type="text" placeholder="Email" />
                                 </div>
                                 <div className="col-lg-12">
-                                    <textarea placeholder="Your Message" defaultValue={""} />
-                                    <button type="submit">Submit Now</button>
+                                    <textarea placeholder="Tin Nhắn" defaultValue={""} />
+                                    <button type="submit">Gửi thông tin</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div className="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0606825994123!2d-72.8735845851828!3d40.760690042573295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e85b24c9274c91%3A0xf310d41b791bcb71!2sWilliam%20Floyd%20Pkwy%2C%20Mastic%20Beach%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1578582744646!5m2!1sen!2sbd" height={470} style={{ border: 0 }} allowFullScreen />
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2324288146738!2d106.80161941462345!3d10.869918392258095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiDEkEhRRyBUUC5IQ00!5e0!3m2!1svi!2s!4v1625150752441!5m2!1svi!2s" height={470} style={{ border: 0 }} allowFullScreen />
                 </div>
             </div>
         </section>
