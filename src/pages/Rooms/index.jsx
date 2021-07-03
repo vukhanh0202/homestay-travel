@@ -1,32 +1,46 @@
 import React, { useState } from 'react';
 import BreadCrumb from '../../components/BreadCrumb';
-import RoomItem from './components/RoomItem';
+import { Apartment } from '../../constants/Apartment';
+import ThumbnailToday from '../../components/Thumnail';
 import './styles.scss';
-
-Rooms.propTypes = {
-
-};
+import { List } from 'antd';
+import 'antd/dist/antd.css';
 
 function Rooms(props) {
-    const elemt = props.apartments.map((item, index) => {
-        return <div key={index} className="col-lg-4 col-md-6">
-            <RoomItem item={item} />
-        </div>
-    })
+
+    const [breadcrumb, setBreadCrumb] = useState({
+        title: 'Danh Sách Phòng',
+        breadcrumb: [
+            {
+                name: 'Trang Chủ',
+            }
+        ],
+        current: 'Danh Sách Phòng'
+    });
     return (
         <div>
-            <BreadCrumb prop={props.breadcrumbs} />
+            <BreadCrumb prop={breadcrumb} />
             <section className="rooms-section spad">
                 <div className="container">
-                    <div className="row">
-                        {elemt}
-                        <div className="col-lg-12">
-                            <div className="room-pagination">
-                                <a href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">Next <i className="fa fa-long-arrow-right" /></a>
-                            </div>
-                        </div>
+                    <div className="">
+                        <List className="grid-home container"
+                            grid={{ gutter: 16, column: 4, row: 3 }}
+                            pagination={{
+                                onChange: page => {
+                                    window.scrollTo(0, 0);
+                                },
+                                pageSize: 12,
+                            }}
+                            dataSource={Apartment}
+                            renderItem={item => (
+                                <List.Item className="item"
+                                    key={item.id}
+                                >
+                                <ThumbnailToday item={item} />
+                                </List.Item>
+                            )}
+                        >
+                        </List>
                     </div>
                 </div>
             </section>

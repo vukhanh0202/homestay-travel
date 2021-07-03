@@ -50,6 +50,9 @@ function DesktopMenu({disableTop}) {
                                             <Link to="/trang-chu" > Trang chủ </Link>
                                         </li>
                                         <li>
+                                            <Link to="/danh-sach" > Danh sách </Link>
+                                        </li>
+                                        <li>
                                             <Link to="/lien-lac" > Liên lạc </Link>
                                         </li>
                                     </nav>

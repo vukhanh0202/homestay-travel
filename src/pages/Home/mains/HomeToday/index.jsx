@@ -1,8 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './styles.scss';
-import Slider from "react-slick";
-import Thumbnail from './components/Thumbnail';
-import ThumbnailToday from './components/Thumbnail';
+import ThumbnailToday from './../../../../components/Thumnail';
 import { Apartment } from '../../../../constants/Apartment';
 
 

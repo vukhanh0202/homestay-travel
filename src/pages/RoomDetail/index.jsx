@@ -22,7 +22,9 @@ function RoomDetail() {
         ],
         current: 'Chi Tiết Phòng'
     });
-
+    const toRegister = () => {
+        history.push(`/dang-ky`);
+    }
     return (
         <div>
             <BreadCrumb prop={breadcrumb} />
@@ -43,7 +45,7 @@ function RoomDetail() {
                                                 <i className="icon_star" />
                                                 <i className="icon_star-half_alt" />
                                             </div>
-                                            <a href="#">Đăng Ký Ngay Để Nhận Ưu Đãi</a>
+                                            <a onClick={() => toRegister()}>Đăng Ký Ngay Để Nhận Ưu Đãi</a>
                                         </div>
                                     </div>
                                     <h2>{result.price}đ<span>/Đêm</span></h2>

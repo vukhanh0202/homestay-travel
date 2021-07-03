@@ -12,8 +12,7 @@ function FormLogin() {
         history.push(`/dang-ky`);
     }
 
-    const onFinish = (values) => {
-      
+    const onFinish = (values) => {      
     };
 
     return (

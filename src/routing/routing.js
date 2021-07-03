@@ -9,6 +9,7 @@ import Footer from './../components/Footer';
 import Header from './../components/Header';
 import ScrollToTop from './ScrollToTop';
 import WrapperContent from './../router/WrapperContent'
+import Rooms from '../pages/Rooms';
 
 function Routing() {
 
@@ -20,13 +21,18 @@ function Routing() {
                     <div className="root">
                         <div>
                             <Route path={["/trang-chu", "/"]} exact>
-                                <WrapperContent >
+                                <WrapperContent>
                                     <Home />
                                 </WrapperContent>
                             </Route>
                             <Route path="/chi-tiet/:id" >
                                 <WrapperContent>
                                     <RoomDetail />
+                                </WrapperContent>
+                            </Route>
+                            <Route path="/danh-sach" >
+                                <WrapperContent>
+                                    <Rooms />
                                 </WrapperContent>
                             </Route>
                             <Route path="/lien-lac" >

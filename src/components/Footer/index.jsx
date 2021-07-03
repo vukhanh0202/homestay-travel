@@ -3,9 +3,7 @@ import './styles.scss';
 
 function Footer({disable}) {
     return (
-        {disable} ? ''
-        : 
-        <footer className="footer-section">
+        <footer  className={`footer-section ${disable ? 'disable' : ''}`}>
             <div className="container">
                 <div className="footer-text">
                     <div className="row">
