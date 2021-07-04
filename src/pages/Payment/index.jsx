@@ -13,7 +13,6 @@ import { useEffect } from 'react';
 const { Step } = Steps;
 
 function Payment(props) {
-
     const [current, setCurrent] = useState(0)
     const [element, setElement] = useState(<MethodPayment />)
     const [method, setMethod] = useState(<MethodPayment />)
@@ -23,18 +22,19 @@ function Payment(props) {
             setMethod(null);
         }
     };
+    const payment = JSON.parse(localStorage.getItem('PAYMENT'));
     useEffect(() => {
         if (current === 0) {
             setElement(<MethodPayment onSelectMethod={onSelectMethod} />)
         } else if (current === 1) {
             console.log(method);
             if (method === 'MOMO') {
-                setElement(<Momo setCurrent={setCurrent} />)
+                setElement(<Momo setCurrent={setCurrent} payment={payment} />)
             } else if (method === 'BANKING') {
-                setElement(<Banking setCurrent={setCurrent} />)
+                setElement(<Banking setCurrent={setCurrent} payment={payment} />)
             }
         } if (current === 2) {
-            setElement(<WaitingConfirm method={method} setCurrent={setCurrent} />)
+            setElement(<WaitingConfirm method={method} setCurrent={setCurrent} payment={payment} />)
         } if (current === 3) {
             setElement(<Success />)
         }

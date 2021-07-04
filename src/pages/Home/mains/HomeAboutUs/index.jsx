@@ -1,14 +1,13 @@
 import React from 'react';
 import Images from '../../../../constants/images';
 import './styles.scss';
-
-
-HomeAboutUs.propTypes = {
-
-};
+import { useHistory } from 'react-router-dom';
 
 function HomeAboutUs() {
-
+    const history = useHistory()
+    const onList = () => {
+        history.push(`/danh-sach`);
+    }
     return (
         <section className="aboutus-section spad">
             <div className="container">
@@ -23,7 +22,7 @@ function HomeAboutUs() {
                                 Thông qua Homestay Travel du khách có nhu cầu thuê phòng trọ sẽ liên hệ với những chủ nhà tại địa phương.</p>
                             <p className="s-para">Các chủ nhà thông qua các căn hộ của mình có thể cho thuê ngắn hạn kiếm tiền một cách dễ dàng. Còn du khách sẽ
                                 được trải nghiệm dịch vụ căn hộ thoải mái và thuận tiện nhất.</p>
-                            <a href="#" className="primary-btn about-btn">Đặt Phòng Ngay</a>
+                            <a onClick={() => onList()} href="#" className="primary-btn about-btn">Đặt Phòng Ngay</a>
                         </div>
                     </div>
                     <div className="col-lg-6">

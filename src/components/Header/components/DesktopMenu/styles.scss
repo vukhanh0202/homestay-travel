@@ -1,3 +1,5 @@
+@import "./../../../../commons/variable.scss";
+
 .header-section.header-normal {
     .menu-item {
         -webkit-box-shadow: 0px 12px 15px rgba(36, 11, 12, 0.05);
@@ -40,9 +42,12 @@
     }
     .tn-right {
         text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         .top-social {
             display: inline-block;
-            margin-right: 35px;
+            margin-right: 20px;
             padding: 13px 0;
             a {
                 display: inline-block;
@@ -61,65 +66,17 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-        .language-option {
+        .icon-wrapper {
             display: inline-block;
-            margin-left: 30px;
-            cursor: pointer;
-            padding: 13px 0px 11px;
-            position: relative;
-            &:hover {
-                .flag-dropdown {
-                    top: 40px;
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-            img {
-                height: 26px;
-                width: 26px;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-            span {
-                font-size: 16px;
-                color: #19191a;
-                text-transform: uppercase;
-                font-weight: 500;
-            }
-            .flag-dropdown {
-                position: absolute;
-                left: 0;
-                top: 60px;
-                width: 100px;
-                background: #ffffff;
-                display: block;
-                padding: 10px 15px;
-                -webkit-box-shadow: 0px 9px 10px rgba(25, 25, 26, 0.2);
-                box-shadow: 0px 9px 10px rgba(25, 25, 26, 0.2);
-                opacity: 0;
-                visibility: hidden;
-                -webkit-transition: all 0.3s;
-                -o-transition: all 0.3s;
-                transition: all 0.3s;
-                z-index: 99;
-                ul {
-                    li {
-                        list-style: none;
-                        text-align: left;
-                        a {
-                            font-size: 14px;
-                            text-transform: uppercase;
-                            font-weight: 500;
-                            color: #19191a;
-                            -webkit-transition: all 0.3s;
-                            -o-transition: all 0.3s;
-                            transition: all 0.3s;
-                            &:hover {
-                                color: #dfa974;
-                            }
-                        }
-                    }
-                }
+            height: 100%;
+            .circle {
+                clip-path: circle(50%);
+                height: 2.5em;
+                width: 2.5em;
+                background-image: url("./../../../../assets/img/room/avatar/cb1.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
     }
@@ -245,4 +202,28 @@
 }
 .offcanvas-menu-wrapper {
     display: none;
+}
+.ant-popover-inner {
+    margin-left: -50px;
+    border-radius: 10px;
+    .popup-content-wrapper {
+        .popup-content {
+            list-style: none;
+            margin: 0px;
+            padding-left: 0px;
+            li {
+                padding: 8px 8px;
+                &:hover {
+                    color: $color-brown;
+                    cursor: pointer;
+                }
+                i {
+                    margin-right: 8px;
+                }
+            }
+            li:not(:last-child) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
 }

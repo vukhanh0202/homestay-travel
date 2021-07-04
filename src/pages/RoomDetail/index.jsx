@@ -12,7 +12,11 @@ function RoomDetail() {
     const history = useHistory()
     let id = parseInt(history.location.pathname.slice(10));
     const result = Apartment.filter(apartment => apartment.id === id)[0];
-
+    const LogIn = localStorage.getItem('LOGIN');
+    const item = {
+        reward: LogIn ? 10 : 0,
+        price: result.priceInt
+    }
     const [breadcrumb, setBreadCrumb] = useState({
         title: 'Chi Tiết Phòng',
         breadcrumb: [
@@ -45,7 +49,14 @@ function RoomDetail() {
                                                 <i className="icon_star" />
                                                 <i className="icon_star-half_alt" />
                                             </div>
-                                            <a onClick={() => toRegister()}>Đăng Ký Ngay Để Nhận Ưu Đãi</a>
+                                            {LogIn
+                                                ?
+                                                <div className="reward">Tài khoản được ưu đãi:
+                                                    <span style={{ fontSize: '2rem', fontWeight: 700, color: '#dfa974' }}> 10%</span>
+                                                </div>
+                                                :
+                                                <a onClick={() => toRegister()}>Đăng Ký Ngay Để Nhận Ưu Đãi</a>
+                                            }
                                         </div>
                                     </div>
                                     <h2>{result.price}đ<span>/Đêm</span></h2>
@@ -66,7 +77,7 @@ function RoomDetail() {
                                         </tbody>
                                     </table>
                                     <p className="f-para">{result.description}</p>
-                                    
+
                                 </div>
                             </div>
                             <div className="rd-reviews">
@@ -109,7 +120,7 @@ function RoomDetail() {
                         </div>
                         <div className="col-lg-4">
                             <div className="room-booking">
-                                <FormBooking />
+                                <FormBooking item={item} />
                             </div>
                         </div>
                     </div>

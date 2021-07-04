@@ -92,7 +92,7 @@ function WaitingConfirm(props) {
                             Số tiền phải thanh toán
                         </div>
                         <div className="total-price__sub">
-                            500.000đ
+                            {(props.payment.price * (100 - props.payment.reward) / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}đ
                         </div>
                     </div>
                     <div className="detail-payment row">
@@ -111,7 +111,7 @@ function WaitingConfirm(props) {
                                     &nbsp;: &nbsp;
                                 </span>
                                 <span className="form-item__content">
-                                    Nguyễn Vũ Khánh
+                                    {props.payment.fullname}
                                 </span>
                             </div>
                             <div className="form-item">
@@ -122,7 +122,7 @@ function WaitingConfirm(props) {
                                     &nbsp;: &nbsp;
                                 </span>
                                 <span className="form-item__content">
-                                    0858100923
+                                    {props.payment.phone}
                                 </span>
                             </div>
                             <div className="form-item">
@@ -133,18 +133,7 @@ function WaitingConfirm(props) {
                                     &nbsp;: &nbsp;
                                 </span>
                                 <span className="form-item__content">
-                                    vukhanh0202@gmail.com
-                                </span>
-                            </div>
-                            <div className="form-item">
-                                <span className="form-item__title">
-                                    Nội Dung
-                                </span>
-                                <span>
-                                    &nbsp;: &nbsp;
-                                </span>
-                                <span className="form-item__content">
-                                    03072021
+                                    {props.payment.email}
                                 </span>
                             </div>
                             <div className="separator">
@@ -179,13 +168,24 @@ function WaitingConfirm(props) {
                                     </div>
                                     <div className="form-item">
                                         <span className="form-item__title">
+                                            Khuyến mãi
+                                        </span>
+                                        <span>
+                                            &nbsp;: &nbsp;
+                                        </span>
+                                        <span className="form-item__content">
+                                            {props.payment.reward}%
+                                        </span>
+                                    </div>
+                                    <div className="form-item">
+                                        <span className="form-item__title">
                                             Tổng tiền phải thành toán
                                         </span>
                                         <span>
                                             &nbsp;: &nbsp;
                                         </span>
                                         <span className="form-item__content">
-                                            400.000đ
+                                            {(props.payment.price * (100 - props.payment.reward) / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}đ
                                         </span>
                                     </div>
                                 </>
@@ -226,13 +226,24 @@ function WaitingConfirm(props) {
                                     </div>
                                     <div className="form-item">
                                         <span className="form-item__title">
+                                            Khuyến mãi
+                                        </span>
+                                        <span>
+                                            &nbsp;: &nbsp;
+                                        </span>
+                                        <span className="form-item__content">
+                                            {props.payment.reward}%
+                                        </span>
+                                    </div>
+                                    <div className="form-item">
+                                        <span className="form-item__title">
                                             Tổng tiền phải thành toán
                                         </span>
                                         <span>
                                             &nbsp;: &nbsp;
                                         </span>
                                         <span className="form-item__content" style={{ fontStyle: 'italic', fontWeight: 600, color: '#01bbbc' }}>
-                                            400.000đ
+                                            {(props.payment.price * (100 - props.payment.reward) / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}đ
                                         </span>
                                     </div>
                                 </>
@@ -264,7 +275,7 @@ function WaitingConfirm(props) {
                             {messages}
                         </div>
                         <div className="input-message">
-                            <Form form={form} onFinish={send} className="form-signup">
+                            <Form form={form} onFinish={send} className="form-message">
                                 <div className="form-group">
                                     <Form.Item className="message" name="message" rules={[{ required: true, message: 'Vui lòng nhập nội dung !' }]}>
                                         <Input autoComplete={'off'} type="text" className="form-group-input" placeholder="Nhập tin nhắn tại đây..."

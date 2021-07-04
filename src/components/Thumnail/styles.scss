@@ -7,7 +7,7 @@
         transition: all 0.3s;
         overflow: hidden;
         border-radius: 5px;
-        img{
+        img {
             transform: scale(1);
         }
         &:hover {
@@ -20,20 +20,35 @@
         }
     }
     .content-wrapper {
-        .content-type {
-            color: $color-gray;
-            font-size: 14px;
-        }
-        .content-name {
-            .name {
-                color: $color-black;
-                font-weight: 400;
-                font-size: 18px;
+        position: relative;
+        .content {
+            .content-type {
+                color: $color-gray;
+                font-size: 14px;
             }
-            .price {
-                color: $color-black;
-                font-weight: 700;
-                font-size: 15px;
+            .content-name {
+                .name {
+                    color: $color-black;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+                .price {
+                    color: $color-black;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+            }
+        }
+        .listing-controls {
+            text-align: right;
+            .un-favorite {
+                margin-right: 5px;
+            }
+            .favorite {
+                margin-right: 5px;
+                i {
+                    color: #ff0f59;
+                }
             }
         }
     }

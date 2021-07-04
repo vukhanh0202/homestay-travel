@@ -27,7 +27,7 @@ function Banking(props) {
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item">
-                                Nguyễn Vũ Khánh
+                                {props.payment.fullname}
                             </span>
                         </div>
                         <div className="form-item">
@@ -38,7 +38,7 @@ function Banking(props) {
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item">
-                                0858100938
+                                {props.payment.phone}
                             </span>
                         </div>
                         <div className="form-item">
@@ -49,18 +49,7 @@ function Banking(props) {
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item">
-                                nguyenvukhanh0202@gmail.com
-                            </span>
-                        </div>
-                        <div className="form-item">
-                            <span className="form-item__title">
-                                Nội Dung
-                            </span>
-                            <span>
-                                &nbsp;: &nbsp;
-                            </span>
-                            <span className="form-item">
-                                03072021
+                                {props.payment.email}
                             </span>
                         </div>
                     </div>
@@ -105,13 +94,24 @@ function Banking(props) {
                         </div>
                         <div className="form-item">
                             <span className="form-item__title">
+                                Khuyến mãi
+                            </span>
+                            <span>
+                                &nbsp;: &nbsp;
+                            </span>
+                            <span className="form-item__content">
+                                {props.payment.reward}%
+                            </span>
+                        </div>
+                        <div className="form-item">
+                            <span className="form-item__title">
                                 Tổng tiền phải thành toán
                             </span>
                             <span>
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item__content" style={{ fontStyle: 'italic', fontWeight: 600, color: '#01bbbc' }}>
-                                400.000đ
+                                {(props.payment.price * (100 - props.payment.reward) / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}đ
                             </span>
                         </div>
                     </div>

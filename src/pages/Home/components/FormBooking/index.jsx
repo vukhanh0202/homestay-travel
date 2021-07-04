@@ -1,64 +1,114 @@
+import { DatePicker, Form, Input } from 'antd';
 import $ from 'jquery';
-import React, { useEffect } from 'react';
-import Select from 'react-select';
-import './styles.scss';
 import 'jquery-ui';
-import 'jquery-ui/ui/widgets/datepicker'
+import 'jquery-ui/ui/widgets/datepicker';
+import React, { useEffect, useState } from 'react';
+import './styles.scss';
+import { useHistory } from 'react-router-dom';
 
-function FormBooking() {
+
+function FormBooking({ item }) {
+    const [checkIn, setCheckIn] = useState();
+    const [checkOut, setCheckOut] = useState();
+    const [date, setDate] = useState();
+    const LogIn = localStorage.getItem('LOGIN');
+    const [form] = Form.useForm();
+
     useEffect(() => {
-        $(".pick-date .icon_calendar").click(function () {
-            console.log($(this).closest('.pick-date').find('input.date-input'));
-            $(this).closest('.pick-date').find('input.date-input').datepicker({
-                minDate: 0,
-                dateFormat: 'dd MM, yy'
-            });
-            $(this).closest('.pick-date').find('input.date-input').focus();
-        });
+        if (checkOut && checkIn)
+            setDate(checkOut - checkIn);
+    }, [checkIn, checkOut])
+    useEffect(() => {
+        if (LogIn) {
+            form.setFieldsValue({
+                fullname: 'Nguyễn Vũ Khánh',
+                email: 'khanh@uit.edu.vn',
+                phone: '0858123823'
+            })
+        }
     }, [])
-
+    const booking = () => {
+        const dataForm = form.getFieldValue();
+        dataForm.date = Math.floor(date / 86400000);
+        localStorage.setItem('PAYMENT', JSON.stringify(
+            {
+                fullname: dataForm.fullname,
+                email: dataForm.email,
+                phone: dataForm.phone,
+                reward: item.reward + 10,
+                price: (item.price * dataForm.date)
+            }
+        ));
+        history.push(`/thanh-toan`);
+    }
+    function onChangeCheckIn(date, dateString) {
+        setCheckIn(date);
+        form.setFieldsValue({
+            checkout: null
+        })
+    }
+    function onChangeCheckOut(date, dateString) {
+        setCheckOut(date);
+    }
+    function disabledDateCheckIn(current) {
+        let customDate = new Date();
+        return current && current <= customDate;
+    }
+    function disabledDateCheckOut(current) {
+        let customDate = checkIn;
+        return current && current <= customDate;
+    }
+    const history = useHistory()
     return (
         <div className="booking-form">
             <h3>Đặt Phòng</h3>
-            <form action="#">
+            <Form form={form} onFinish={booking} className="form-booking">
                 <div className="check-date">
-                    <label htmlFor="date-in">Check In:</label>
+                    <label htmlFor="date-in">Ngày vào:</label>
                     <div className='pick-date'>
-                        <input type="text" className="date-input" id="date-in" />
-                        <i className="icon_calendar" />
+                        <Form.Item className="message" name="checkin" rules={[{ required: true, message: 'Vui lòng chọn ngày vào !' }]}>
+                            <DatePicker disabledDate={disabledDateCheckIn} onChange={onChangeCheckIn} placeholder="" />
+                        </Form.Item>
                     </div>
                 </div>
                 <div className="check-date">
-                    <label htmlFor="date-out">Check Out:</label>
+                    <label htmlFor="date-out">Ngày ra:</label>
                     <div className='pick-date'>
-                        <input type="text" className="date-input" id="date-out" />
-                        <i className="icon_calendar" />
+                        <Form.Item className="message" name="checkout" rules={[{ required: true, message: 'Vui lòng chọn ngày ra !' }]}>
+                            <DatePicker disabledDate={disabledDateCheckOut} onChange={onChangeCheckOut} placeholder="" />
+                        </Form.Item>
                     </div>
                 </div>
-                <div className="select-option">
-                    <label htmlFor="guest">Guests:</label>
-                    <Select
-                        name="guest"
-                        options={[
-                            { value: '2 Adults', label: '2 Adults' },
-                            { value: '3 Adults', label: '3 Adults' },
-                        ]}
-                    />
+                <div className="check-date">
+                    <label >Tên:</label>
+                    <div className='pick-date'>
+                        <Form.Item className="message" name="fullname" rules={[{ required: true, message: 'Vui lòng nhập tên !' }]}>
+                            <Input autoComplete={'off'} type="text" className="date-input"
+                            />
+                        </Form.Item>
+                    </div>
                 </div>
-                <div className="select-option">
-                    <label htmlFor="room">Room:</label>
-                    <Select
-                        name="room"
-                        options={[
-                            { value: '1 Room', label: '1 Room' },
-                            { value: '2 Room', label: '2 Room' },
-                        ]}
-                    />
+                <div className="check-date">
+                    <label htmlFor="room">Email:</label>
+                    <div className='pick-date'>
+                        <Form.Item className="message" name="email" rules={[{ required: true, message: 'Vui lòng nhập email !' }]}>
+                            <Input autoComplete={'off'} type="text" className="date-input"
+                            />
+                        </Form.Item>
+                    </div>
                 </div>
-                <button type="submit">Check Availability</button>
-            </form>
+                <div className="check-date">
+                    <label >Số điện thoại:</label>
+                    <div className='pick-date'>
+                        <Form.Item className="message" name="phone" rules={[{ required: true, message: 'Vui lòng nhập SĐT !' }]}>
+                            <Input autoComplete={'off'} type="text" className="date-input"
+                            />
+                        </Form.Item>
+                    </div>
+                </div>
+                <button type="submit">Đặt phòng</button>
+            </Form>
         </div>
     );
 }
-
 export default FormBooking;

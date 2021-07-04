@@ -26,7 +26,7 @@ function Momo(props) {
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item">
-                                Nguyễn Vũ Khánh
+                                {props.payment.fullname}
                             </span>
                         </div>
                         <div className="form-item">
@@ -37,7 +37,7 @@ function Momo(props) {
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item">
-                                0858100938
+                                {props.payment.phone}
                             </span>
                         </div>
                         <div className="form-item">
@@ -48,20 +48,10 @@ function Momo(props) {
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item">
-                                nguyenvukhanh0202@gmail.com
+                                {props.payment.email}
                             </span>
                         </div>
-                        <div className="form-item">
-                            <span className="form-item__title">
-                                Nội Dung
-                            </span>
-                            <span>
-                                &nbsp;: &nbsp;
-                            </span>
-                            <span className="form-item">
-                                03072021
-                            </span>
-                        </div>
+
                     </div>
                 </div>
                 <div className="col-4">
@@ -93,13 +83,24 @@ function Momo(props) {
                         </div>
                         <div className="form-item">
                             <span className="form-item__title">
+                                Khuyến mãi
+                            </span>
+                            <span>
+                                &nbsp;: &nbsp;
+                            </span>
+                            <span className="form-item__content">
+                                {props.payment.reward}%
+                            </span>
+                        </div>
+                        <div className="form-item">
+                            <span className="form-item__title">
                                 Tổng tiền phải thành toán
                             </span>
                             <span>
                                 &nbsp;: &nbsp;
                             </span>
                             <span className="form-item__content">
-                                400.000đ
+                                {(props.payment.price * (100 - props.payment.reward) / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}đ
                             </span>
                         </div>
 

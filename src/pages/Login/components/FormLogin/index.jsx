@@ -1,9 +1,7 @@
+import { Form, Input, message } from 'antd';
 import React from 'react';
-import './styles.scss';
-import { Form } from 'antd';
-import { Input } from 'antd';
 import { useHistory } from 'react-router-dom';
-
+import './styles.scss';
 function FormLogin() {
 
     const [form] = Form.useForm();
@@ -12,9 +10,14 @@ function FormLogin() {
         history.push(`/dang-ky`);
     }
 
-    const onFinish = (values) => {      
+    const onFinish = (values) => {
+        if (values.username === 'user' && values.password === '123') {
+            localStorage.setItem('LOGIN', true);
+            history.goBack();
+        } else {
+            message.error("Sai tài khoản hoặc mật khẩu");
+        }
     };
-
     return (
         <Form form={form} className="form-login" onFinish={onFinish}>
             <div className="form-login-text">

@@ -9,6 +9,7 @@ import Payment from '../pages/Payment';
 import ScrollToTop from './ScrollToTop';
 import WrapperContent from './../router/WrapperContent'
 import Rooms from '../pages/Rooms';
+import Favourite from '../pages/Favourite';
 
 function Routing() {
 
@@ -32,6 +33,11 @@ function Routing() {
                             <Route path="/danh-sach" >
                                 <WrapperContent>
                                     <Rooms />
+                                </WrapperContent>
+                            </Route>
+                            <Route path="/danh-sach-yeu-thich" >
+                                <WrapperContent>
+                                    <Favourite />
                                 </WrapperContent>
                             </Route>
                             <Route path="/lien-lac" >
