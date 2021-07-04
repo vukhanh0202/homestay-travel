@@ -31,13 +31,6 @@ function HomeHighlight() {
             address: "Đà Lạt",
             number: "1484"
         }
-        ,
-        {
-            id: 5,
-            img: "https://cdn.luxstay.com/home/location/location_16_1559303173.png",
-            address: "Đà Nẵng",
-            number: "906"
-        }
     ]
     )
     return (
@@ -48,10 +41,10 @@ function HomeHighlight() {
                     <p className="sub-title">Cùng Homestay Travel bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
                 </div>
             </div>
-            <div className="container-fluid">
+            <div className="container">
                 <div className="row">
                     {list.map(item => {
-                        return (<div key={item?.id} className="item col-2">
+                        return (<div key={item?.id} className="item col-6 col-lg-3">
                             <Thumbnail list={item} />
                         </div>);
                     })}

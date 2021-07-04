@@ -16,6 +16,10 @@ function Favourite(props) {
             history.push('/trang-chu')
         }
     }, []);
+    useEffect(() => {
+        var element = document.getElementsByClassName("ant-list-items")[0];
+        element.classList.add("row");
+    }, []);
     const [breadcrumb, setBreadCrumb] = useState({
         title: 'Danh Sách Yêu Thích',
         breadcrumb: [
@@ -33,7 +37,6 @@ function Favourite(props) {
                 <div className="container">
                     <div className="">
                         <List className="grid-home container"
-                            grid={{ gutter: 16, column: 4, row: 3 }}
                             pagination={{
                                 onChange: page => {
                                     window.scrollTo(0, 0);
@@ -42,7 +45,7 @@ function Favourite(props) {
                             }}
                             dataSource={list}
                             renderItem={item => (
-                                <List.Item className="item"
+                                <List.Item className="item col-6 col-lg-3"
                                     key={item.id}
                                 >
                                     <ThumbnailToday item={item} />

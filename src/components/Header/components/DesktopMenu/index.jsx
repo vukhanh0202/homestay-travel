@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Popover } from "antd";
+import React from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import Images from '../../../../constants/images';
 import './styles.scss';
-import { useHistory } from 'react-router-dom';
-import { Form, Input, Row, Col, Popover } from "antd"
 
 function DesktopMenu({ disableTop }) {
     const history = useHistory()

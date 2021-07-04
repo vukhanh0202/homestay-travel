@@ -48,6 +48,7 @@ function Payment(props) {
             <Steps
                 type="navigation"
                 current={current}
+                progressDot={false}
                 onChange={onChange}
                 className="site-navigation-steps"
                 percent={60}

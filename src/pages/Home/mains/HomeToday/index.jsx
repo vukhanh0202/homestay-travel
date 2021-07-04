@@ -16,8 +16,8 @@ function HomeToday() {
                 </div>
                 <div className="row">
                     {list.map((item, key) => {
-                        return (<div key={key} className="item col-3">
-                            <ThumbnailToday item={item}  />
+                        return (<div key={key} className="item col-6 col-lg-3">
+                            <ThumbnailToday item={item} />
                         </div>);
                     })}
                 </div>

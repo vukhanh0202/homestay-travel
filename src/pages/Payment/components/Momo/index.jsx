@@ -8,12 +8,12 @@ function Momo(props) {
         <div className="method-momo-wrapper">
             <h5 className="text-center">THÔNG TIN THANH TOÁN MOMO</h5>
             <div className="row content">
-                <div className="colcol-4">
+                <div className="col-12 col-lg-4">
                     <div className="method-payment">
                         <img src={Images.MOMO} />
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-lg-4 mr-10">
                     <div className="method-form">
                         <p className="title">
                             Thông tin người gửi
@@ -54,7 +54,7 @@ function Momo(props) {
 
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-lg-4 mr-10">
                     <div className="method-form">
                         <p className="title">
                             Thông tin người nhận

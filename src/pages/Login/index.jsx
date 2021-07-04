@@ -7,10 +7,10 @@ import CarouselLogin from "./components/CarouselForm";
 
 function Login() {
     return (
-            <div className="row">
-                <div className="col-5"><FormLogin /></div>
-                <div className="col-7"><CarouselLogin /></div>
-            </div>
+        <div className="row">
+            <div className="col-lg-5" style={{ padding: '0 2rem' }}><FormLogin /></div>
+            <div className="col-lg-7"><CarouselLogin /></div>
+        </div>
     );
 }
 

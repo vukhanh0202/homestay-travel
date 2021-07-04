@@ -9,12 +9,12 @@ function Banking(props) {
         <div className="method-banking-wrapper">
             <h5 className="text-center">THÔNG TIN THANH TOÁN CHUYỂN KHOẢN NGÂN HÀNG</h5>
             <div className="row content">
-                <div className="col-4">
+                <div className="col-12 col-lg-4">
                     <div className="method-payment">
                         <img src={Images.INTERNET_BANKING} />
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-lg-4 mr-10">
                     <div className="method-form">
                         <p className="title">
                             Thông tin người gửi
@@ -54,7 +54,7 @@ function Banking(props) {
                         </div>
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-lg-4 mr-10">
                     <div className="method-form">
                         <p className="title">
                             Thông tin người nhận

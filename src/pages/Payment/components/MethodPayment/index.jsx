@@ -24,12 +24,12 @@ function MethodPayment(props) {
         <div className="method-payment-wrapper">
             <h5 className="text-center">VUI LÒNG CHỌN PHƯƠNG THỨC BẠN MUỐN SỬ DỤNG ĐỂ THANH TOÁN</h5>
             <div className="row content">
-                <div className="col-xs-12 col-6 ">
+                <div className="col-12 col-lg-6 ">
                     <div className="method-payment">
                         <img src={Images.MOMO} onClick={() => onSelectMethodMomo()} />
                     </div>
                 </div>
-                <div className="col-xs-12 col-6">
+                <div className="col-12 col-lg-6">
                     <div className="method-payment">
                         <img src={Images.INTERNET_BANKING} onClick={() => onSelectMethodBanking()} />
                     </div>

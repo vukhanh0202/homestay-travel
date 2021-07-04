@@ -1,8 +1,12 @@
 @import "./../../../../commons/variable.scss";
 
 .method-payment-wrapper {
+    @media only screen and (min-width: 992px) {
+        .content {
+            margin: 3rem 15rem;
+        }
+    }
     .content {
-        margin: 3rem 15rem;
         .method-payment {
             display: flex;
             align-items: center;
@@ -11,6 +15,7 @@
             img {
                 position: relative;
                 transition: all 0.3s;
+                margin: 10px;
                 &:hover {
                     cursor: pointer;
                     transform: scale(1.1);

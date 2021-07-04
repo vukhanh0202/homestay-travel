@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.scss';
 
-function Footer({disable}) {
+function Footer({ disable }) {
     return (
-        <footer  className={`footer-section ${disable ? 'disable' : ''}`}>
+        <footer className={`footer-section ${disable ? 'disable' : ''}`}>
             <div className="container">
                 <div className="footer-text">
                     <div className="row">
@@ -16,11 +16,11 @@ function Footer({disable}) {
                                 </div>
                                 <p>Chúng tôi đã thu hút và đáp ứng hàng triệu khách du lịch thông qua website</p>
                                 <div className="fa-social">
-                                    <a><i className="fa fa-facebook" /></a>
-                                    <a><i className="fa fa-twitter" /></a>
-                                    <a><i className="fa fa-tripadvisor" /></a>
-                                    <a><i className="fa fa-instagram" /></a>
-                                    <a><i className="fa fa-youtube-play" /></a>
+                                    <a><i className="fab fa-facebook-f" /></a>
+                                    <a><i className="fab fa-twitter" /></a>
+                                    <a><i className="fab fa-tripadvisor" /></a>
+                                    <a><i className="fab fa-instagram" /></a>
+                                    <a><i className="fab fa-youtube" /></a>
                                 </div>
                             </div>
                         </div>

@@ -7,11 +7,11 @@ Header.propTypes = {
 
 };
 
-function Header({disableTop}) {
+function Header({ disableTop }) {
     return (
         <div>
             {/*Offcanvas Menu Section Begin*/}
-            <MobileMenu />
+            <MobileMenu disableTop={disableTop} />
             {/*Offcanvas Menu Section End*/}
 
             {/*Header Section Begin*/}

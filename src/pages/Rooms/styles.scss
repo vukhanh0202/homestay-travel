@@ -1,8 +1,15 @@
 .rooms-section {
     padding-top: 0;
     padding-bottom: 80px;
+    .ant-list-split .ant-list-item {
+        border: none !important;
+    }
+    .item {
+        padding: 10px 10px;
+        min-height: 200px;
+    }
 }
-.ant-pagination{
+.ant-pagination {
     text-align: center;
 }
 .room-pagination {

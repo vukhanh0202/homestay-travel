@@ -25,7 +25,7 @@ function ThumbnailToday({ item }) {
                         {item?.type} - {item?.bedroom}
                     </div>
                     <div className="content-name">
-                        <div className="name">{item?.title}</div>
+                        <div className="name">{item?.title.substring(0, 11)}</div>
                         <div className="price-wrapper row">
                             <div className="price col-7" onClick={() => toDetailHome()}>
                                 {item?.price} ₫/đêm

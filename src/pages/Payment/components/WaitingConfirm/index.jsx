@@ -86,7 +86,7 @@ function WaitingConfirm(props) {
     return (
         <div className="waiting-confirm-wrapper">
             <div className="row">
-                <div className="col-8 infomation">
+                <div className="col-12 col-lg-8 infomation">
                     <div className="total-price">
                         <div className="total-price__title">
                             Số tiền phải thanh toán
@@ -261,7 +261,7 @@ function WaitingConfirm(props) {
                         <a href="#" className="bk-btn">Khiếu nại</a>
                     </div>
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-lg-4 mr-10">
                     <div className="chat-wrapper">
                         <div className="people-name">
                             <div className="name">

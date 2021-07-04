@@ -121,3 +121,12 @@
         }
     }
 }
+
+@media only screen and (max-width: 992px) {
+    .co-text {
+        text-align: center !important;
+    }
+    .footer-text {
+        padding-top: 0px !important;
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BreadCrumb from '../../components/BreadCrumb';
 import { Apartment } from '../../constants/Apartment';
 import ThumbnailToday from '../../components/Thumnail';
@@ -17,14 +17,18 @@ function Rooms(props) {
         ],
         current: 'Danh Sách Phòng'
     });
+    useEffect(() => {
+        var element = document.getElementsByClassName("ant-list-items")[0];
+        element.classList.add("row");
+    }, []);
+
     return (
         <div>
             <BreadCrumb prop={breadcrumb} />
             <section className="rooms-section spad">
                 <div className="container">
-                    <div className="">
+                    <div className="row">
                         <List className="grid-home container"
-                            grid={{ gutter: 16, column: 4, row: 3 }}
                             pagination={{
                                 onChange: page => {
                                     window.scrollTo(0, 0);
@@ -33,10 +37,10 @@ function Rooms(props) {
                             }}
                             dataSource={Apartment}
                             renderItem={item => (
-                                <List.Item className="item"
+                                <List.Item className="item col-6 col-lg-3"
                                     key={item.id}
                                 >
-                                <ThumbnailToday item={item} />
+                                    <ThumbnailToday item={item} />
                                 </List.Item>
                             )}
                         >

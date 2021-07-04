@@ -6,10 +6,10 @@ import CarouselLogin from "./../Login/components/CarouselForm";
 
 function Register() {
     return (
-            <div className="row">
-                <div className="col-5"><FormRegister /></div>
-                <div className="col-7"><CarouselLogin /></div>
-            </div>
+        <div className="row">
+            <div className="col-lg-5" style={{ padding: '0 2rem' }}><FormRegister /></div>
+            <div className="col-lg-7"><CarouselLogin /></div>
+        </div>
     );
 }
 
