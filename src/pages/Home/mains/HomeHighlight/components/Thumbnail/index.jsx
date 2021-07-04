@@ -1,9 +1,15 @@
 import React from 'react';
 import './styles.scss';
+import { useHistory } from 'react-router-dom';
 
 function Thumbnail({ list }) {
+
+    const history = useHistory()
+    const toListHome = () => {
+        history.push(`/danh-sach`);
+    }
     return (
-        <div className="thumnail-home_item">
+        <div className="thumnail-home_item" onClick={() => toListHome()}>
             <div className="thumnail-home_item__cover">
                 <img className="thumnail-home_item__image"
                     src={list?.img} />

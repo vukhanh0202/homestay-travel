@@ -1,0 +1,21 @@
+@import "./../../../../commons/variable.scss";
+
+.method-payment-wrapper {
+    .content {
+        margin: 3rem 15rem;
+        .method-payment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            img {
+                position: relative;
+                transition: all 0.3s;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+@import "./../../../../commons/variable.scss";
+.waiting-confirm-wrapper {
+    .infomation {
+        height: 100%;
+        .total-price {
+            width: 100%;
+            border: 1px solid rgba($color: #333, $alpha: 0.2);
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            &__title {
+                font-size: 1.1rem;
+            }
+            &__sub {
+                font-size: 1.3rem;
+                font-weight: 800;
+                color: #01bbbc;
+            }
+        }
+        .detail-payment {
+            height: 100%;
+            &__img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+            }
+            .separator {
+                width: 70%;
+                height: 1px;
+                border-bottom: 1px solid rgba($color: #333, $alpha: 0.2);
+                margin: 10px 0;
+            }
+            &__info {
+                .form-item {
+                    font-size: 1.2em;
+                    margin: 5px 0;
+                    &__title {
+                        font-weight: 700;
+                    }
+                }
+                .detail-title {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    font-size: 1.3em;
+                    color: #333;
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+        .realise {
+            margin-top: 10px;
+            &__title {
+                font-size: 1.2em;
+                font-weight: 500;
+                .minute {
+                    color: $color-brown;
+                }
+            }
+            &__sub {
+                font-style: italic;
+                font-size: 0.9em;
+                width: 80%;
+            }
+            .bk-btn {
+                margin-top: 15px;
+                display: inline-block;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 10px 20px 10px;
+                background: #dfa974;
+                color: #ffffff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .chat-wrapper {
+        border: 1px solid rgba($color: #333, $alpha: 0.2);
+        border-radius: 10px;
+        height: 30rem;
+        position: relative;
+        .people-name {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 12px 15px rgba(36, 11, 12, 0.05);
+            height: 15%;
+            .name {
+                color: royalblue;
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
+            .email {
+                font-size: 0.9rem;
+                font-weight: 400;
+                font-style: italic;
+            }
+        }
+        .chat-content {
+            padding: 5px 10px;
+            overflow-y: scroll;
+            height: 75%;
+            div {
+                display: inline-block;
+                padding: 10px 15px;
+                border-radius: 30px;
+                margin-bottom: 2px;
+                max-width: 80%;
+                margin-top: 10px;
+            }
+            .chat-receive {
+                background: #eee;
+                float: left;
+                clear: both;
+            }
+            .chat-send {
+                float: right;
+                background: $color-brown;
+                color: #fff;
+                clear: both;
+            }
+            .chat-receive + .chat-send {
+                border-bottom-right-radius: 5px;
+            }
+
+            .chat-send + .chat-send {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .chat-send:last-of-type {
+                border-bottom-right-radius: 30px;
+            }
+        }
+        .input-message {
+            height: 10%;
+            .form-signup {
+                height: 100%;
+                .form-group-input {
+                    background-clip: padding-box;
+                    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+                    font-weight: bold;
+                    line-height: 1.5;
+                    height: 50px;
+                    padding: 8px 15px;
+                    border-radius: 8px;
+                    width: 100%;
+                    color: #6e6e6e;
+                    border: 1px solid #e5e1dc;
+                    background-color: #fff;
+                    letter-spacing: 0.1px;
+                    font-size: 14px;
+                }
+                .icon {
+                    font-size: 1.3rem;
+                    margin-left: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: $color-brown;
+                    }
+                }
+            }
+        }
+    }
+}

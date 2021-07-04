@@ -5,8 +5,7 @@ import RoomDetail from '../pages/RoomDetail';
 import Contact from '../pages/Contact';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
-import Footer from './../components/Footer';
-import Header from './../components/Header';
+import Payment from '../pages/Payment';
 import ScrollToTop from './ScrollToTop';
 import WrapperContent from './../router/WrapperContent'
 import Rooms from '../pages/Rooms';
@@ -38,6 +37,11 @@ function Routing() {
                             <Route path="/lien-lac" >
                                 <WrapperContent>
                                     <Contact />
+                                </WrapperContent>
+                            </Route>
+                            <Route path="/thanh-toan" >
+                                <WrapperContent>
+                                    <Payment />
                                 </WrapperContent>
                             </Route>
                             <Route path="/dang-nhap" >

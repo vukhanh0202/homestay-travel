@@ -43,6 +43,11 @@ import gallery4 from '../assets/img/gallery/gallery-4.jpg';
 import cb1 from '../assets/img/room/avatar/cb1.jpg';
 import cb2 from '../assets/img/room/avatar/cb2.jpg';
 
+import momo from '../assets/img/momo.png';
+import internetBanking from '../assets/img/internet.png';
+
+import Success from '../assets/img/success.png';
+
 
 import videoBg from '../assets/img/video-bg.jpg';
 
@@ -104,6 +109,12 @@ const Images = {
     // Avatar
     AVATAR_1: cb1,
     AVATAR_2: cb2,
+
+    // methodPayment
+    MOMO: momo,
+    INTERNET_BANKING: internetBanking,
+
+    SUCCESS: Success,
 }
 
 export default Images;

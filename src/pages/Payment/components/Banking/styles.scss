@@ -1,0 +1,48 @@
+@import "./../../../../commons/variable.scss";
+
+.method-banking-wrapper {
+    .content {
+        margin: 3rem 0rem;
+        .method-payment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.9rem;
+        }
+        .form-item {
+            font-size: 1.2em;
+            margin: 5px 0;
+            &__title {
+                font-weight: 700;
+            }
+            &__content {
+                color: #01bbbc;
+            }
+        }
+        .btn-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: flex-end;
+            padding-right: 5%;
+            .bk-btn {
+                margin-top: 20px;
+                display: inline-block;
+                font-size: 13px;
+                font-weight: 700;
+                padding: 16px 28px 15px;
+                background: #dfa974;
+                color: #ffffff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
