@@ -1,10 +1,11 @@
-import { DatePicker, Form, Input } from 'antd';
+import { DatePicker, Form, Input, message } from 'antd';
 import $ from 'jquery';
 import 'jquery-ui';
 import 'jquery-ui/ui/widgets/datepicker';
 import React, { useEffect, useState } from 'react';
 import './styles.scss';
 import { useHistory } from 'react-router-dom';
+import Modal from 'antd/lib/modal/Modal';
 
 
 function FormBooking({ item }) {
@@ -13,6 +14,7 @@ function FormBooking({ item }) {
     const [date, setDate] = useState();
     const LogIn = localStorage.getItem('LOGIN');
     const [form] = Form.useForm();
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         if (checkOut && checkIn)
@@ -39,7 +41,7 @@ function FormBooking({ item }) {
                 price: (item.price * dataForm.date)
             }
         ));
-        history.push(`/thanh-toan`);
+        setIsVisible(true);
     }
     function onChangeCheckIn(date, dateString) {
         setCheckIn(date);
@@ -59,8 +61,22 @@ function FormBooking({ item }) {
         return current && current <= customDate;
     }
     const history = useHistory()
+
+    const handleOk = () => {
+        history.push('/thanh-toan')
+    }
+
+    const handleCancel = () => {
+        setIsVisible(false);
+        message.success("Đặt phòng thành công")
+    }
+
     return (
         <div className="booking-form">
+            <Modal className='popup' title="Xác nhận" visible={isVisible} onOk={handleOk} onCancel={handleCancel} cancelText="Chỉ đặt phòng" okText="Thanh toán">
+                <p>Tổng số tiền phòng của bạn là: <span style={{ fontWeight: 600, fontSize: '1.2rem', color: '#dfa974' }}>{(((100 - item.reward) / 100) * item.price * Math.floor(date / 86400000)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}đ</span></p>
+                <p style={{ fontWeight: 600 }}>Thanh toán ngay để được giảm giá <span style={{ fontSize: '1.2rem', color: '#dfa974' }}>10%</span></p>
+            </Modal>
             <h3>Đặt Phòng</h3>
             <Form form={form} onFinish={booking} className="form-booking">
                 <div className="check-date">
