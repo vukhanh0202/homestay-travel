@@ -261,7 +261,7 @@ function WaitingConfirm(props) {
                         <a href="#" className="bk-btn">Khiếu nại</a>
                     </div>
                 </div>
-                <div className="col-12 col-lg-4 mr-10">
+                <div className="col-12 col-lg-4 ">
                     <div className="chat-wrapper">
                         <div className="people-name">
                             <div className="name">

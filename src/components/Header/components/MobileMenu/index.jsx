@@ -59,7 +59,7 @@ function MobileMenu({ disableTop }) {
                     </div>
                     :
                     <div className="btn-wrapper">
-                        <a href="#" className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
+                        <a className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
                     </div>
                 }
             </div>

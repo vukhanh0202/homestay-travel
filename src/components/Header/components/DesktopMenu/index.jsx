@@ -54,7 +54,7 @@ function DesktopMenu({ disableTop }) {
                                         </Popover>
                                     </div>
                                     :
-                                    <a href="#" className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
+                                    <a className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
                                 }
                             </div>
                         </div>

@@ -1,19 +1,36 @@
-import React from 'react';
+import { Form, Input } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import './styles.scss';
-import { Form } from 'antd';
-import { Input } from 'antd';
-import { useHistory } from 'react-router-dom';
 
 function FormRegister() {
-
+    const location = useLocation();
     const [form] = Form.useForm();
     const history = useHistory()
     const toLogin = () => {
-        history.push(`/dang-nhap`);
-    }
+        history.push({
+            pathname: '/dang-nhap',
+            search: `?id=${location.search.slice(4)}`,
+        })
+        // if (location.search !== "") {
 
+        // } else {
+        //     history.push(`/dang-nhap`);
+        // }
+    }
     const onFinish = (values) => {
-        history.push(`/dang-nhap`);
+        history.push({
+            pathname: '/dang-nhap',
+            search: `?id=${location.search.slice(4)}`,
+        })
+        // if (location.search !== "") {
+        //     history.push({
+        //         pathname: '/dang-nhap',
+        //         id: `?id=${location.search.slice(4)}`,
+        //     })
+        // } else {
+        //     history.push(`/dang-nhap`);
+        // }
     };
 
     return (

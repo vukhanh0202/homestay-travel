@@ -1,9 +1,9 @@
 import { Form, Input, message } from 'antd';
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import './styles.scss';
 function FormLogin() {
-
+    const location = useLocation();
     const [form] = Form.useForm();
     const history = useHistory()
     const toRegister = () => {
@@ -13,7 +13,11 @@ function FormLogin() {
     const onFinish = (values) => {
         if (values.username === 'user' && values.password === '123') {
             localStorage.setItem('LOGIN', true);
-            history.goBack();
+            if (location.search !== "") {
+                history.push(`/chi-tiet/${location.search.slice(4)}`);
+            } else {
+                history.goBack();
+            }
         } else {
             message.error("Sai tài khoản hoặc mật khẩu");
         }

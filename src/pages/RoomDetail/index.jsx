@@ -27,7 +27,11 @@ function RoomDetail() {
         current: 'Chi Tiết Phòng'
     });
     const toRegister = () => {
-        history.push(`/dang-ky`);
+        history.push({
+            pathname: '/dang-ky',
+            search: `?id=${id}`,
+        })
+        // history.push(`/dang-ky`);
     }
     return (
         <div>
