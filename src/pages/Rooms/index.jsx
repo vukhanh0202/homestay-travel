@@ -35,7 +35,7 @@ function Rooms(props) {
                                 },
                                 pageSize: 12,
                             }}
-                            dataSource={Apartment}
+                            dataSource={Apartment.filter(item => item.favourite === true)}
                             renderItem={item => (
                                 <List.Item className="item col-6 col-lg-3"
                                     key={item.id}
