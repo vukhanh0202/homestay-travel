@@ -13,10 +13,10 @@ function FormLogin() {
     const onFinish = (values) => {
         if (values.username === 'user' && values.password === '123') {
             localStorage.setItem('LOGIN', true);
-            if (location.search !== "") {
+            if (location.search !== "" && location.search.slice(4) !== "") {
                 history.push(`/chi-tiet/${location.search.slice(4)}`);
             } else {
-                history.goBack();
+                history.push("/trang-chu");
             }
         } else {
             message.error("Sai tài khoản hoặc mật khẩu");
