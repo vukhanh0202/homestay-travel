@@ -1,7 +1,7 @@
 import {
     TagsOutlined, SendOutlined
 } from '@ant-design/icons';
-import { Form, Input, Upload, message } from 'antd';
+import { Form, Input, Upload } from 'antd';
 import 'antd/dist/antd.css';
 import React, { useEffect, useState } from 'react';
 import Images from '../../../../constants/images';
@@ -62,7 +62,7 @@ function WaitingConfirm(props) {
         setMessages(content.map((item, index) => {
             if (item.link !== undefined) {
                 return <div key={index} className={item.class} style={{ backgroundColor: 'transparent' }}>
-                    <img src={item.link} width='150px' height='auto' />
+                    <img alt="" src={item.link} width='150px' height='auto' />
                 </div>
             } else {
                 return <div key={index} className={item.class}>
@@ -97,7 +97,7 @@ function WaitingConfirm(props) {
                     </div>
                     <div className="detail-payment row">
                         <div className="detail-payment__img col-4">
-                            {props.method === 'MOMO' ? <img src={Images.MOMO} /> : <img src={Images.INTERNET_BANKING} />}
+                            {props.method === 'MOMO' ? <img src={Images.MOMO} alt="" /> : <img src={Images.INTERNET_BANKING} alt="" />}
                         </div>
                         <div className="detail-payment__info col-8">
                             <p className="detail-title">
@@ -258,7 +258,7 @@ function WaitingConfirm(props) {
                             (Thanh toán dự tính trong vòng 15 phút. Nếu hết thời gian thanh toán vẫn chưa được xác nhận
                             bạn có thể khiếu nại cho quản trị viên)
                         </div>
-                        <a href="#" className="bk-btn">Khiếu nại</a>
+                        <a href className="bk-btn">Khiếu nại</a>
                     </div>
                 </div>
                 <div className="col-12 col-lg-4 ">

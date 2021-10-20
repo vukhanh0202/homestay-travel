@@ -1,11 +1,7 @@
-import { Steps } from 'antd';
 import 'antd/dist/antd.css';
 import React from 'react';
 import Images from '../../../../constants/images';
 import './styles.scss';
-
-const { Step } = Steps;
-
 
 function MethodPayment(props) {
     const onSelectMethodMomo = () => {
@@ -26,12 +22,12 @@ function MethodPayment(props) {
             <div className="row content">
                 <div className="col-12 col-lg-6 ">
                     <div className="method-payment">
-                        <img src={Images.MOMO} onClick={() => onSelectMethodMomo()} />
+                        <img alt="" src={Images.MOMO} onClick={() => onSelectMethodMomo()} />
                     </div>
                 </div>
                 <div className="col-12 col-lg-6">
                     <div className="method-payment">
-                        <img src={Images.INTERNET_BANKING} onClick={() => onSelectMethodBanking()} />
+                        <img alt="" src={Images.INTERNET_BANKING} onClick={() => onSelectMethodBanking()} />
                     </div>
                 </div>
             </div>

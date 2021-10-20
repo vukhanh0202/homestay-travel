@@ -10,17 +10,17 @@ function Footer({ disable }) {
                         <div className="col-lg-4">
                             <div className="ft-about">
                                 <div className="logo">
-                                    <a>
+                                    <a href>
                                         <img src="img/footer-logo.png" alt="" />
                                     </a>
                                 </div>
                                 <p>Chúng tôi đã thu hút và đáp ứng hàng triệu khách du lịch thông qua website</p>
                                 <div className="fa-social">
-                                    <a><i className="fab fa-facebook-f" /></a>
-                                    <a><i className="fab fa-twitter" /></a>
-                                    <a><i className="fab fa-tripadvisor" /></a>
-                                    <a><i className="fab fa-instagram" /></a>
-                                    <a><i className="fab fa-youtube" /></a>
+                                    <a href><i className="fab fa-facebook-f" /></a>
+                                    <a href><i className="fab fa-twitter" /></a>
+                                    <a href><i className="fab fa-tripadvisor" /></a>
+                                    <a href><i className="fab fa-instagram" /></a>
+                                    <a href><i className="fab fa-youtube" /></a>
                                 </div>
                             </div>
                         </div>
@@ -52,9 +52,9 @@ function Footer({ disable }) {
                     <div className="row">
                         <div className="col-lg-7">
                             <ul>
-                                <li><a >Liên Lạc</a></li>
-                                <li><a >Điều Khoản Sử Dụng</a></li>
-                                <li><a>Chính Sách</a></li>
+                                <li><a href>Liên Lạc</a></li>
+                                <li><a href>Điều Khoản Sử Dụng</a></li>
+                                <li><a href>Chính Sách</a></li>
                             </ul>
                         </div>
                         <div className="col-lg-5">

@@ -1,5 +1,4 @@
 import { DatePicker, Form, Input, message } from 'antd';
-import $ from 'jquery';
 import 'jquery-ui';
 import 'jquery-ui/ui/widgets/datepicker';
 import React, { useEffect, useState } from 'react';
@@ -28,6 +27,7 @@ function FormBooking({ item }) {
                 phone: '0858123823'
             })
         }
+        // eslint-disable-next-line
     }, [])
     const booking = () => {
         const dataForm = form.getFieldValue();

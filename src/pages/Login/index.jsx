@@ -1,4 +1,3 @@
-import { Col, Row } from "antd";
 import React from 'react';
 import './styles.scss';
 import FormLogin from "./components/FormLogin";

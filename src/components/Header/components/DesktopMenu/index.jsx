@@ -42,8 +42,8 @@ function DesktopMenu({ disableTop }) {
                         <div className="col-lg-6">
                             <div className="tn-right">
                                 <div className="top-social">
-                                    <a href="#"><i className="fa fa-facebook" /></a>
-                                    <a href="#"><i className="fa fa-instagram" /></a>
+                                    <a href><i className="fa fa-facebook" /></a>
+                                    <a href><i className="fa fa-instagram" /></a>
                                 </div>
                                 {LogIn
                                     ?
@@ -54,7 +54,7 @@ function DesktopMenu({ disableTop }) {
                                         </Popover>
                                     </div>
                                     :
-                                    <a className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
+                                    <a href className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
                                 }
                             </div>
                         </div>
@@ -66,7 +66,7 @@ function DesktopMenu({ disableTop }) {
                     <div className="row">
                         <div className="col-lg-2">
                             <div className="logo">
-                                <a onClick={() => toHome()}>
+                                <a href onClick={() => toHome()}>
                                     <img src={Images.LOGO} alt="" />
                                 </a>
                             </div>

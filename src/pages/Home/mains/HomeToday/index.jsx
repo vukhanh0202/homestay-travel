@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import './styles.scss';
 import ThumbnailToday from './../../../../components/Thumnail';
 import { Apartment } from '../../../../constants/Apartment';

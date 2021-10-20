@@ -38,6 +38,7 @@ function Payment(props) {
         } if (current === 3) {
             setElement(<Success />)
         }
+        // eslint-disable-next-line
     }, [current])
     const onSelectMethod = (methodSelected) => {
         setCurrent(methodSelected.current);

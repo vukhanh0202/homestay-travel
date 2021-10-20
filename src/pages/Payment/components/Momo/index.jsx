@@ -10,7 +10,7 @@ function Momo(props) {
             <div className="row content">
                 <div className="col-12 col-lg-4">
                     <div className="method-payment">
-                        <img src={Images.MOMO} />
+                        <img alt="" src={Images.MOMO} />
                     </div>
                 </div>
                 <div className="col-12 col-lg-4 mr-10">
@@ -107,7 +107,7 @@ function Momo(props) {
                     </div>
                 </div>
                 <div className="btn-wrapper">
-                    <a onClick={() => props.setCurrent(2)} className="bk-btn">Xác Nhận</a>
+                    <a href onClick={() => props.setCurrent(2)} className="bk-btn">Xác Nhận</a>
                 </div>
             </div>
         </div>

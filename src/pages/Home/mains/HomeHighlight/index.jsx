@@ -1,11 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
-import Slider from "react-slick";
 import Thumbnail from './components/Thumbnail';
 
 function HomeHighlight() {
 
-    const slide = useRef(null);
+    // eslint-disable-next-line
     const [list, setList] = useState([
         {
             id: 1,

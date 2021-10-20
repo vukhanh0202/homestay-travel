@@ -1,5 +1,4 @@
 import React from 'react';
-import Images from '../../../../constants/images';
 import './styles.scss';
 import { Popover } from "antd";
 import { Link, useHistory } from 'react-router-dom';
@@ -18,9 +17,7 @@ function MobileMenu({ disableTop }) {
     const toLogin = () => {
         history.push(`/dang-nhap`);
     }
-    const toHome = () => {
-        history.push(`/trang-chu`);
-    }
+
     const LogIn = localStorage.getItem('LOGIN');
 
     const content = (
@@ -59,7 +56,7 @@ function MobileMenu({ disableTop }) {
                     </div>
                     :
                     <div className="btn-wrapper">
-                        <a className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
+                        <a href className={`bk-btn ${disableTop ? 'disable' : ''}`} onClick={() => toLogin()}>Đăng Nhập</a>
                     </div>
                 }
             </div>
