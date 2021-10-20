@@ -15,11 +15,13 @@ function Favourite(props) {
         if (!LogIn) {
             history.push('/trang-chu')
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     useEffect(() => {
         var element = document.getElementsByClassName("ant-list-items")[0];
         element.classList.add("row");
     }, []);
+    // eslint-disable-next-line
     const [breadcrumb, setBreadCrumb] = useState({
         title: 'Danh Sách Yêu Thích',
         breadcrumb: [

@@ -1,5 +1,5 @@
 import { Form, Input, message } from 'antd';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import './styles.scss';
 function FormLogin() {
@@ -61,7 +61,7 @@ function FormLogin() {
             </div>
             <p className="text-end">
                 Bạn chưa có tài khoản?
-                <a onClick={() => toRegister()}> Tạo ngay </a>
+                <a href onClick={() => toRegister()}> Tạo ngay </a>
             </p>
         </Form>
     );

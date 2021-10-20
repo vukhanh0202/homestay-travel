@@ -17,6 +17,7 @@ function RoomDetail() {
         reward: LogIn ? 10 : 0,
         price: result.priceInt
     }
+    // eslint-disable-next-line
     const [breadcrumb, setBreadCrumb] = useState({
         title: 'Chi Tiết Phòng',
         breadcrumb: [
@@ -59,7 +60,7 @@ function RoomDetail() {
                                                     <span style={{ fontSize: '2rem', fontWeight: 700, color: '#dfa974' }}> 10%</span>
                                                 </div>
                                                 :
-                                                <a onClick={() => toRegister()}>Đăng Ký Ngay Để Nhận Ưu Đãi</a>
+                                                <a href onClick={() => toRegister()}>Đăng Ký Ngay Để Nhận Ưu Đãi</a>
                                             }
                                         </div>
                                     </div>

@@ -1,5 +1,5 @@
 import { Form, Input } from 'antd';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import './styles.scss';
 
@@ -12,25 +12,12 @@ function FormRegister() {
             pathname: '/dang-nhap',
             search: `?id=${location.search.slice(4)}`,
         })
-        // if (location.search !== "") {
-
-        // } else {
-        //     history.push(`/dang-nhap`);
-        // }
     }
     const onFinish = (values) => {
         history.push({
             pathname: '/dang-nhap',
             search: `?id=${location.search.slice(4)}`,
         })
-        // if (location.search !== "") {
-        //     history.push({
-        //         pathname: '/dang-nhap',
-        //         id: `?id=${location.search.slice(4)}`,
-        //     })
-        // } else {
-        //     history.push(`/dang-nhap`);
-        // }
     };
 
     return (
@@ -84,7 +71,7 @@ function FormRegister() {
             </div>
             <p className="text-end">
                 Bạn đã có tài khoản?
-                <a onClick={() => toLogin()}> Đăng nhập</a>
+                <a href onClick={() => toLogin()}> Đăng nhập</a>
             </p>
         </Form>
     );

@@ -12,7 +12,7 @@ function Thumbnail({ list }) {
         <div className="thumnail-home_item" onClick={() => toListHome()}>
             <div className="thumnail-home_item__cover">
                 <img className="thumnail-home_item__image"
-                    src={list?.img} />
+                    src={list?.img} alt="" />
             </div>
             <div className="thumnail-home_item__content is-absolute white-deep">
                 <div className="thumnail-home_item__title extra-bold">{list?.address}</div>

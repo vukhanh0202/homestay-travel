@@ -16,7 +16,7 @@ function ThumbnailToday({ item }) {
     return (
         <div className="thumnail-today" >
             <div className="img-wrapper" onClick={() => toDetailHome()}>
-                <img className="thumnail-home_item__image" width='100%' height='192px'
+                <img alt="" className="thumnail-home_item__image" width='100%' height='192px'
                     src={item?.img} />
             </div>
             <div className="content-wrapper">
@@ -31,7 +31,7 @@ function ThumbnailToday({ item }) {
                                 {item?.price} ₫/đêm
                             </div>
                             <div class="listing-controls col-5" onClick={() => setFavorite()}>
-                                <a class={isFavorite ? "favorite" : "un-favorite"}>
+                                <a href class={isFavorite ? "favorite" : "un-favorite"}>
                                     <i class="far fa-heart"></i>
                                 </a>
                                 Yêu thích
