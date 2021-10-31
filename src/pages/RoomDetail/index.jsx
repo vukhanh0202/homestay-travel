@@ -5,6 +5,7 @@ import FormBooking from '../../pages/Home/components/FormBooking';
 import { useHistory } from 'react-router-dom';
 import './styles.scss';
 import { Apartment } from '../../constants/Apartment';
+import SliderBanner from '../Home/components/SliderBanner';
 
 
 function RoomDetail() {
@@ -34,6 +35,15 @@ function RoomDetail() {
         })
         // history.push(`/dang-ky`);
     }
+    // eslint-disable-next-line
+    const [list, setList] = useState([
+        result.img,
+        "https://cdn.luxstay.com/rooms/37700/large/IMG_2698.jpg",
+        "https://cdn.luxstay.com/users/419998/xNdGXrwocu0jC0Xq_WaTAl6x.jpg",
+        "https://cdn.luxstay.com/users/47608/X2Swqa-wSRPhevvzwSevj1aF.jpg",
+        "https://cdn.luxstay.com/users/407757/BXSWxc8JJfPItWkkKpNpwqMf.jpg"
+    ]
+    )
     return (
         <div>
             <BreadCrumb prop={breadcrumb} />
@@ -41,12 +51,15 @@ function RoomDetail() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">
+                            <SliderBanner className={"slider-detail"} list={list}/>
                             <div className="room-details-item">
-                                <img src={result.img} alt="" />
+                                {/* <img src={result.img} alt="" /> */}
                                 <div className="rd-text">
-                                    <div className="rd-title">
-                                        <h3>{result.title}</h3>
-                                        <div className="rdt-right">
+                                    <div className="rd-title row">
+                                        <div className="title-wrapper col-4">
+                                            <h3>{result.title}</h3>
+                                        </div>
+                                        <div className="rdt-right col-8">
                                             <div className="rating">
                                                 <i className="icon_star" />
                                                 <i className="icon_star" />

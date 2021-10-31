@@ -1,14 +1,9 @@
 import $ from 'jquery';
 import React, { useEffect } from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import Images from '../../../../constants/images';
 import './styles.scss';
 
-SliderBanner.propTypes = {
-
-};
-
-function SliderBanner() {
+function SliderBanner(props) {
     useEffect(() => {
         $('.set-bg').each(function () {
             var bg = $(this).data('setbg');
@@ -17,11 +12,12 @@ function SliderBanner() {
     }, [])
 
     return (
-        <OwlCarousel className='hero-slider owl-carousel' loop margin={0} items={1} dots animateOut={'fadeOut'}
+        <OwlCarousel className={`owl-carousel hero-slider ${props.className}`} loop margin={0} items={1} dots animateOut={'fadeOut'}
             animateIn={'fadeIn'} smartSpeed={1200} autoHeight={false} autoplay mouseDrag={false}>
-            <div className="hs-item set-bg" data-setbg={Images.SLIDE_BANNER_1} />
-            <div className="hs-item set-bg" data-setbg={Images.SLIDE_BANNER_2} />
-            <div className="hs-item set-bg" data-setbg={Images.SLIDE_BANNER_3} />
+                {props.list.map(item => {
+                        return (<div style={{backgroundSize: 'cover'}} className="hs-item set-bg" data-setbg={item} />
+                        );
+                })}
         </OwlCarousel>
     );
 }

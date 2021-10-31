@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles.scss';
 import { useHistory } from 'react-router-dom';
+import Heart from '../Heart';
 
 function ThumbnailToday({ item }) {
 
@@ -18,6 +19,7 @@ function ThumbnailToday({ item }) {
             <div className="img-wrapper" onClick={() => toDetailHome()}>
                 <img alt="" className="thumnail-home_item__image" width='100%' height='192px'
                     src={item?.img} />
+                <Heart item={item}/>
             </div>
             <div className="content-wrapper">
                 <div className="content">
@@ -31,10 +33,7 @@ function ThumbnailToday({ item }) {
                                 {item?.price} ₫/đêm
                             </div>
                             <div class="listing-controls col-5" onClick={() => setFavorite()}>
-                                <a href class={isFavorite ? "favorite" : "un-favorite"}>
-                                    <i class="far fa-heart"></i>
-                                </a>
-                                Yêu thích
+                                <Heart item={item}/>
                             </div>
                         </div>
                     </div>

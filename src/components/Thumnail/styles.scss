@@ -3,10 +3,12 @@
 .thumnail-today {
     width: 100%;
     cursor: pointer;
+    z-index: 999;
     .img-wrapper {
         transition: all 0.3s;
         overflow: hidden;
         border-radius: 5px;
+        position: relative;
         img {
             transform: scale(1);
         }

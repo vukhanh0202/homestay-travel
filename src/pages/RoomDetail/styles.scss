@@ -9,12 +9,15 @@
     }
     .rd-text {
         .rd-title {
-            overflow: hidden;
             margin-bottom: 8px;
-            h3 {
-                color: #19191a;
+            .title-wrapper{
+                overflow: hidden;
                 float: left;
+                h3 {
+                    color: #19191a;
+                }
             }
+            
             .rdt-right {
                 float: right;
                 text-align: right;
@@ -35,6 +38,11 @@
                     background: #dfa974;
                     padding: 14px 28px 13px;
                     cursor: pointer;
+                    transition: all ease .3s;
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: all ease .3s;
+                    }
                 }
                 .reward {
                     font-size: 1.5rem;

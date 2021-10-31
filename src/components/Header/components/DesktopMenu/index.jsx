@@ -1,6 +1,6 @@
 import { Popover } from "antd";
 import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { NavLink , useHistory } from 'react-router-dom';
 import Images from '../../../../constants/images';
 import './styles.scss';
 
@@ -75,13 +75,13 @@ function DesktopMenu({ disableTop }) {
                             <div className="nav-menu">
                                 <nav className="mainmenu">
                                     <li>
-                                        <Link to="/trang-chu" > Trang chủ </Link>
+                                        <NavLink  to="/trang-chu" activeClassName="is-active" > Trang chủ </NavLink >
                                     </li>
                                     <li>
-                                        <Link to="/danh-sach" > Danh sách </Link>
+                                        <NavLink  to="/danh-sach" activeClassName="is-active"> Danh sách </NavLink >
                                     </li>
                                     <li>
-                                        <Link to="/lien-lac" > Liên lạc </Link>
+                                        <NavLink  to="/lien-lac" activeClassName="is-active"> Liên lạc </NavLink >
                                     </li>
                                 </nav>
 

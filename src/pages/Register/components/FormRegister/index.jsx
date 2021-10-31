@@ -1,4 +1,4 @@
-import { Form, Input } from 'antd';
+import { Form, Input, message } from 'antd';
 import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import './styles.scss';
@@ -14,6 +14,7 @@ function FormRegister() {
         })
     }
     const onFinish = (values) => {
+        message.error("Đăng Ký Thành Công");
         history.push({
             pathname: '/dang-nhap',
             search: `?id=${location.search.slice(4)}`,

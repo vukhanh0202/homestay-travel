@@ -1,12 +1,11 @@
+import { message } from 'antd';
 import React from 'react';
 import './styles.scss';
 
-Contact.propTypes = {
-
-};
-
-function Contact(props) {
-
+function Contact() {
+    const submitInfo = () => {
+        message.success("Gửi thông tin thành công!");
+    }
     return (
         <section className="contact-section spad">
             <div className="container">
@@ -44,7 +43,7 @@ function Contact(props) {
                                 </div>
                                 <div className="col-lg-12">
                                     <textarea placeholder="Tin Nhắn" defaultValue={""} />
-                                    <button type="submit">Gửi thông tin</button>
+                                    <button  onClick={() => submitInfo()} type="submit">Gửi thông tin</button>
                                 </div>
                             </div>
                         </form>

@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SliderBanner from '../../components/SliderBanner';
 import './styles.scss';
 import { useHistory } from 'react-router-dom';
+import Images from '../../../../constants/images';
 
 function HomeBanner() {
     const history = useHistory()
     const onList = () => {
         history.push(`/danh-sach`);
     }
+    // eslint-disable-next-line
+    const [list, setList] = useState([
+        Images.SLIDE_BANNER_1,
+        Images.SLIDE_BANNER_2,
+        Images.SLIDE_BANNER_3
+    ]
+    )
     return (
         <section className="hero-section">
             <div className="container">
@@ -23,7 +31,7 @@ function HomeBanner() {
                     </div>
                 </div>
             </div>
-            <SliderBanner />
+            <SliderBanner className={"hero-slider"} list={list}/>
         </section>
     );
 }
