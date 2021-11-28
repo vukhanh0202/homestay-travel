@@ -41,7 +41,7 @@ function Rooms() {
                                 <List.Item className="item col-6 col-lg-3"
                                     key={item.id}
                                 >
-                                    <ThumbnailToday item={item} isLogin={LogIn}/>
+                                    <ThumbnailToday item={item} isLogin={LogIn} favouriteList={false}/>
                                 </List.Item>
                             )}
                         >

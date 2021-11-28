@@ -31,7 +31,7 @@ function Favourite(props) {
         ],
         current: 'Danh Sách Yêu Thích'
     });
-    const list = Apartment.slice(2, 10);
+    const list = Apartment.filter(word => word.favourite === true);
     return (
         <div>
             <BreadCrumb prop={breadcrumb} />
