@@ -9,6 +9,9 @@
     transition: background-position 1s steps(28);
     transition-duration: 0s;
     float: right;
+    &:hover:not(&.is-active){
+      transform: scale(0.7);
+    }
     &.is-active {
       transition-duration: 1s;
       background-position: -2800px 0;

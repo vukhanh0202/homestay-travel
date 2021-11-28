@@ -3,7 +3,7 @@ import './styles.scss';
 import { useHistory } from 'react-router-dom';
 import Heart from '../Heart';
 
-function ThumbnailToday({ item }) {
+function ThumbnailToday({ item, isLogin, favouriteList }) {
 
     const history = useHistory()
     const toDetailHome = () => {
@@ -19,7 +19,7 @@ function ThumbnailToday({ item }) {
             <div className="img-wrapper" onClick={() => toDetailHome()}>
                 <img alt="" className="thumnail-home_item__image" width='100%' height='192px'
                     src={item?.img} />
-                <Heart item={item}/>
+                <Heart item={item} isLogin={isLogin} favouriteList={favouriteList}/>
             </div>
             <div className="content-wrapper">
                 <div className="content">
@@ -33,7 +33,7 @@ function ThumbnailToday({ item }) {
                                 {item?.price} ₫/đêm
                             </div>
                             <div class="listing-controls col-5" onClick={() => setFavorite()}>
-                                <Heart item={item}/>
+                                <Heart item={item} isLogin={isLogin} favouriteList={favouriteList}/>
                             </div>
                         </div>
                     </div>

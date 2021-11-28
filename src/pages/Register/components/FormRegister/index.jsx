@@ -14,7 +14,7 @@ function FormRegister() {
         })
     }
     const onFinish = (values) => {
-        message.error("Đăng Ký Thành Công");
+        message.success("Đăng Ký Thành Công");
         history.push({
             pathname: '/dang-nhap',
             search: `?id=${location.search.slice(4)}`,
@@ -60,7 +60,7 @@ function FormRegister() {
             </div>
             <div className="form-signup-group">
                 <label>Số điện thoại</label>
-                <Form.Item name="rePassword" rules={[{ required: true, message: 'Vui lòng nhập số điện thoại !' }]}>
+                <Form.Item name="phone" rules={[{ required: true, message: 'Vui lòng nhập số điện thoại !' }]}>
                     <Input type="text" className="form-signup-group-control" placeholder="Nhập số điện thoại" />
                 </Form.Item>
             </div>

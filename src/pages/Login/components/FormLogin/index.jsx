@@ -28,7 +28,7 @@ function FormLogin() {
                 <h3>Đăng Nhập</h3>
             </div>
             <div className="form-login-group">
-                <label>Tài khoản</label>
+                <label>Tài khoản (Mặc định: user)</label>
                 <Form.Item
                     name="username"
                     rules={[
@@ -41,7 +41,7 @@ function FormLogin() {
                 </Form.Item>
             </div>
             <div className="form-login-group">
-                <label>Mật khẩu</label>
+                <label>Mật khẩu (Mặc định: 123) </label>
                 <Form.Item
                     name="password"
                     rules={[

@@ -69,6 +69,7 @@
         .icon-wrapper {
             display: inline-block;
             height: 100%;
+            cursor: pointer;
             .circle {
                 clip-path: circle(50%);
                 height: 2.5em;
@@ -91,8 +92,10 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+        cursor: pointer;
         a {
             display: inline-block;
+            cursor: pointer;
         }
     }
     .nav-menu {

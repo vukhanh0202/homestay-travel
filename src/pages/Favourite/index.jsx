@@ -50,7 +50,7 @@ function Favourite(props) {
                                 <List.Item className="item col-6 col-lg-3"
                                     key={item.id}
                                 >
-                                    <ThumbnailToday item={item} />
+                                    <ThumbnailToday item={item} favouriteList={true}/>
                                 </List.Item>
                             )}
                         >

@@ -20,7 +20,7 @@ function WaitingConfirm(props) {
     const [content, setContent] = useState([
         {
             class: 'chat-receive',
-            message: "Nếu có thắc mắc gì trong quá trình thanh toán bạn có thể liên lạc trực tiếp với quản trị viên thông qua khung chat"
+            message: "Nếu có thắc mắc gì trong quá trình thanh toán bạn có thể liên lạc trực tiếp với quản trị viên thông qua khung chat. Nhấn nút hoàn thành hoặc chat DONE để xác nhận"
         }
     ]);
     const [messages, setMessages] = useState();
@@ -44,6 +44,9 @@ function WaitingConfirm(props) {
             message: null
         })
 
+    }
+    const confirmDone = () => {
+        props.setCurrent(3);
     }
     useEffect(() => {
         const intervalID = setTimeout(() => {
@@ -258,7 +261,7 @@ function WaitingConfirm(props) {
                             (Thanh toán dự tính trong vòng 15 phút. Nếu hết thời gian thanh toán vẫn chưa được xác nhận
                             bạn có thể khiếu nại cho quản trị viên)
                         </div>
-                        <a href className="bk-btn">Khiếu nại</a>
+                        <a href className="bk-btn" onClick={()=> confirmDone()}>Hoàn Thành</a>
                     </div>
                 </div>
                 <div className="col-12 col-lg-4 ">

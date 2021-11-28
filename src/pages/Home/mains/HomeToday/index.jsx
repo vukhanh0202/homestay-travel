@@ -7,6 +7,7 @@ import { Apartment } from '../../../../constants/Apartment';
 function HomeToday() {
 
     const list = Apartment.slice(0, 8);
+    const LogIn = localStorage.getItem('LOGIN');
     return (
         <section className="section-today">
             <div className="container">
@@ -17,7 +18,7 @@ function HomeToday() {
                 <div className="row">
                     {list.map((item, key) => {
                         return (<div key={key} className="item col-6 col-lg-3">
-                            <ThumbnailToday item={item} />
+                            <ThumbnailToday item={item} isLogin={LogIn}/>
                         </div>);
                     })}
                 </div>

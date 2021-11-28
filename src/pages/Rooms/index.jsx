@@ -6,8 +6,8 @@ import './styles.scss';
 import { List } from 'antd';
 import 'antd/dist/antd.css';
 
-function Rooms(props) {
-
+function Rooms() {
+    const LogIn = localStorage.getItem('LOGIN');
     // eslint-disable-next-line
     const [breadcrumb, setBreadCrumb] = useState({
         title: 'Danh Sách Phòng',
@@ -41,7 +41,7 @@ function Rooms(props) {
                                 <List.Item className="item col-6 col-lg-3"
                                     key={item.id}
                                 >
-                                    <ThumbnailToday item={item} />
+                                    <ThumbnailToday item={item} isLogin={LogIn}/>
                                 </List.Item>
                             )}
                         >
