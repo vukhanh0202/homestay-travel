@@ -39,7 +39,9 @@
         right: 0;
         .select-value {
             margin-left: 20px;
-            color: #848486;
+            color: #dfa974;
+            font-weight: bold;
+            font-size: 1rem;
         }
     }
 }
@@ -62,4 +64,7 @@
 }
 .ant-select-dropdown {
     border-radius: 10px;
+}
+.option-active{
+    color: #dfa974;
 }

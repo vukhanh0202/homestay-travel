@@ -23,16 +23,22 @@ function Rooms() {
     const [apartmentList, setApartmentList] = useState(Apartment);
     useEffect(() => {
         var element = document.getElementsByClassName("ant-list-items")[0];
-        element.classList.add("row");
+        if (element !== undefined){
+            element.classList.add("row");
+        }
     }, []);
 
     const search = () => {
         let number = Math.floor(Math.random() * 10);
-        if (valueInput === undefined || valueInput === ''){
-            setApartmentList(Apartment);
-        }else{
-            setApartmentList(Apartment.splice(0,number));
+        if (number ===0){
+            number = 5;
         }
+        let arr = Apartment.slice(0, number);
+        setApartmentList(arr);
+    }
+
+    const clearFilter = () => {
+        setApartmentList(Apartment);
     }
 
     const area = [
@@ -405,12 +411,15 @@ function Rooms() {
             <div className="acr-filter-form container">
                 <div className="search-type-real">
                     <Row>
-                        <Col span={19}>
+                        <Col span={16}>
                             {/* <Input className="input" placeholder="Tìm kiếm..." onChange={onSearch} /> */}
                             <Input className="input" placeholder="Tìm kiếm..." value={valueInput} onInput={e => setValueInput(e.target.value)}/>
                         </Col>
-                        <Col span={4}  offset={1} onClick={() => search()}>
+                        <Col span={4} style={{marginLeft:'25px'}} onClick={() => search()}>
                             <ButtonCustom value="Tìm kiếm" className="btn-search" />
+                        </Col>
+                        <Col span={3} style={{marginLeft:'15px'}} onClick={() => clearFilter()}>
+                            <ButtonCustom value="Xóa lọc" className="btn-search btn-search__grey" />
                         </Col>
                     </Row>
                 </div>
@@ -441,11 +450,6 @@ function Rooms() {
                         </Row>
                     </div>
                 </form>
-                {/* <div className={`advanced-search-trigger semi-circle ${active == true ? '' : 'active'}`} onClick={handleToggle}> */}
-                <div className={`advanced-search-trigger semi-circle `}>
-                    <i className="fas fa-chevron-down">
-                    </i>
-                </div>
             </div>
             <section className="rooms-section spad">
                 <div className="container">

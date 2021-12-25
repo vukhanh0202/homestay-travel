@@ -70,6 +70,7 @@ function SelectCustom({ title, options, onHandleChange, value, disabled }) {
             </Option>
         }
     };
+    // const active = shouldScrollHeader ? 'option-active' : '';
     return (
         <div>
             <Select
@@ -93,10 +94,18 @@ function SelectCustom({ title, options, onHandleChange, value, disabled }) {
                 </Option> */}
                 {checkTypeSelect()}
                 {items.map((item, index) => {
-                    return (<Option value={item.name} key={item.id}>
+                    if (currentValue === item.name){
+                        console.log("Đúng");
+                        return (<Option value={item.name} key={item.id} className='option-active'> 
                         {item.name}
-                        {/* <DisplayItem value={item.name} lastchild={index == items.length - 1 ? 'last-child' : ''} /> */}
                     </Option>)
+                    }else{
+                        console.log("Sai");
+                        return (<Option value={item.name} key={item.id}> 
+                        {item.name}
+                    </Option>)
+                    }
+                    
                 })}
                 {/* <Option className="input-wrapper" key=''>
                     <Input placeholder="Search"

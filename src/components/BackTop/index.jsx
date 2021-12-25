@@ -8,7 +8,6 @@ function BackTop() {
     useDocumentScroll(callbackData => {
         // eslint-disable-next-line
         const { previousScrollTop, currentScrollTop } = callbackData;
-        console.log(currentScrollTop);
         if (currentScrollTop > MINIMUM_SCROLL) {
             setShouldScrollHeader(true)
         } else {
