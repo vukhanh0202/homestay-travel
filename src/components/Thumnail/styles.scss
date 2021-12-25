@@ -29,6 +29,19 @@
                 font-size: 14px;
             }
             .content-name {
+                &:hover{
+                    .name {
+                        color: $color-brown!important;
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
+                    .price {
+                        color: $color-brown!important;
+                        font-weight: 700;
+                        font-size: 15px;
+                       
+                    }
+                }
                 .name {
                     color: $color-black;
                     font-weight: 400;
@@ -38,6 +51,7 @@
                     color: $color-black;
                     font-weight: 700;
                     font-size: 15px;
+                   
                 }
             }
         }
