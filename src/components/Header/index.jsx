@@ -9,7 +9,7 @@ Header.propTypes = {
 
 function Header({ disableTop }) {
     return (
-        <div>
+        <div style={{height: '141px'}}>
             {/*Offcanvas Menu Section Begin*/}
             <MobileMenu disableTop={disableTop} />
             {/*Offcanvas Menu Section End*/}

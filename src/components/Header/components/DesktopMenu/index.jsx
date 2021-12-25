@@ -1,11 +1,23 @@
 import { Popover } from "antd";
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink , useHistory } from 'react-router-dom';
 import Images from '../../../../constants/images';
+import useDocumentScroll from '../../../../hooks/useDocumentScroll'
 import './styles.scss';
 
 function DesktopMenu({ disableTop }) {
     const history = useHistory()
+    const [shouldScrollHeader, setShouldScrollHeader] = useState(false);
+    const MINIMUM_SCROLL = 10;
+    useDocumentScroll(callbackData => {
+        // eslint-disable-next-line
+        const { previousScrollTop, currentScrollTop } = callbackData;
+        if (currentScrollTop > MINIMUM_SCROLL) {
+            setShouldScrollHeader(true)
+        } else {
+            setShouldScrollHeader(false)
+        }
+    });
     const toLogin = () => {
         history.push(`/dang-nhap`);
     }
@@ -28,9 +40,10 @@ function DesktopMenu({ disableTop }) {
             </ul>
         </div>
     );
+    const topStyle = shouldScrollHeader ? '' : '';
     return (
         <header className="header-section">
-            <div className="top-nav">
+            <div className= {`top-nav ${topStyle}`}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">

@@ -8,7 +8,7 @@ const history = createBrowserHistory();
 function App(props) {
 
     return (
-        <div>
+        <div style={{position: 'relative'}}>
             <BrowserRouter history={history}>
                 <Routing />
             </BrowserRouter>

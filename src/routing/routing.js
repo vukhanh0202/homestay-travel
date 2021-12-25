@@ -10,12 +10,12 @@ import ScrollToTop from './ScrollToTop';
 import WrapperContent from './../router/WrapperContent'
 import Rooms from '../pages/Rooms';
 import Favourite from '../pages/Favourite';
+import BackTop from '../components/BackTop';
 
 function Routing() {
 
     return (
-        <div className="root-wrapper">
-            {/* this is admin page */}
+        <div className="root-wrapper" style={{position: 'relative'}}>
             <ScrollToTop>
                 <Switch>
                     <div className="root">
@@ -64,6 +64,7 @@ function Routing() {
                     </div>
                 </Switch>
             </ScrollToTop>
+            <BackTop />
         </div>
     )
 }

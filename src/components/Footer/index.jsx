@@ -1,7 +1,22 @@
-import React from 'react';
+import { message } from 'antd';
+import React, {useState} from 'react';
 import './styles.scss';
 
 function Footer({ disable }) {
+    const [valueInput, setValueInput] = useState('');
+    const messageSuccess = () => {
+        // const regex =/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        // if (regex.test(this.state.email) === false);
+        if (valueInput !== "undefined") {
+            var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+            if (!pattern.test(valueInput)) {
+                message.error("Địa chỉ Email không phù hợp");
+            }else{
+                message.success("Thêm địa chỉ Email thành công");
+                setValueInput('')
+            }
+        }
+    }
     return (
         <footer className={`footer-section ${disable ? 'disable' : ''}`}>
             <div className="container">
@@ -16,11 +31,11 @@ function Footer({ disable }) {
                                 </div>
                                 <p>Chúng tôi đã thu hút và đáp ứng hàng triệu khách du lịch thông qua website</p>
                                 <div className="fa-social">
-                                    <a href><i className="fab fa-facebook-f" /></a>
-                                    <a href><i className="fab fa-twitter" /></a>
-                                    <a href><i className="fab fa-tripadvisor" /></a>
-                                    <a href><i className="fab fa-instagram" /></a>
-                                    <a href><i className="fab fa-youtube" /></a>
+                                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f" /></a>
+                                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter" /></a>
+                                    <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-tripadvisor" /></a>
+                                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" /></a>
+                                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube" /></a>
                                 </div>
                             </div>
                         </div>
@@ -38,10 +53,10 @@ function Footer({ disable }) {
                             <div className="ft-newslatter">
                                 <h6>Thêm Thông Tin</h6>
                                 <p>Nhận ngay ưu đãi và cập nhật mới nhất.</p>
-                                <form action="#" className="fn-form">
-                                    <input type="text" placeholder="Email" />
-                                    <button type="submit"><i className="fa fa-send" /></button>
-                                </form>
+                                <div className="fn-form">
+                                    <input value={valueInput} onInput={e => setValueInput(e.target.value)} type="text" placeholder="Email" />
+                                    <button onClick={() => messageSuccess()}><i className="fa fa-send" /></button>
+                                </div>
                             </div>
                         </div>
                     </div>
