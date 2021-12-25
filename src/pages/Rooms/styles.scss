@@ -35,3 +35,98 @@
         }
     }
 }
+.acr-filter-form {
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 20px 20px 0;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    .search-type-real {
+        margin-bottom: 15px;
+        padding-left: 10px;
+        .dropdown-search {
+            width: 13.5%;
+        }
+
+        .btn-search {
+            font-size: 18px;
+            background-color: #dfa974;
+            margin: 0;
+            width: 90%;
+            height: 58px;
+            margin-left: 10px;
+        }
+
+        .input-search {
+            width: 100%;
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+        .ant-btn,
+        .ant-input {
+            height: 58px;
+            border-radius: 8px;
+            box-shadow: 0 2px 9px 0 rgba(34, 12, 43, 0.1);
+            border: 0;
+        }
+        .ant-input {
+            margin-left: 3px;
+        }
+
+        .ant-input-search-button {
+            background-color: #dfa974;
+            padding: 8px 25px;
+            border-radius: 0 8px 8px 0px;
+        }
+    }
+    .item-form {
+        padding: 0px 10px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .btn-custom {
+        background-color: #dfa974;
+        font-size: 14px;
+        margin: 0 auto;
+        line-height: 40px;
+        padding: 8px 25px;
+        font-weight: 700;
+    }
+    .advanced-search{
+        margin-top: 10px;
+        .active {
+            display: none;
+        }
+    }
+    
+    
+    .semi-circle {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        height: 45px;
+        width: 90px;
+        border-bottom-left-radius: 90px;
+        border-bottom-right-radius: 90px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: #01bbbc;
+        }
+        i {
+            transition: transform 0.3s;
+        }
+        &.active i {
+            transform: rotate(180deg);
+        }
+    }
+}
