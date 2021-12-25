@@ -10,6 +10,10 @@ import ButtonCustom from '../../components/Button'
 function Rooms() {
     const LogIn = localStorage.getItem('LOGIN');
     const [valueInput, setValueInput] = useState('');
+    const [valueCity, setvalueCity] = useState({ id: null, name: '' });
+    const [valuePrice, setValuePrice] = useState({ id: null, name: '' });
+    const [valueArea, setValueArea] = useState({ id: null, name: '' });
+    const [valueRoom, setValueRoom] = useState({ id: null, name: '' });
     // eslint-disable-next-line
     const [breadcrumb, setBreadCrumb] = useState({
         title: 'Danh Sách Phòng',
@@ -39,7 +43,12 @@ function Rooms() {
 
     const clearFilter = () => {
         setApartmentList(Apartment);
+        setvalueCity({ id: null, name: '' });
+        setValuePrice({ id: null, name: '' });
+        setValueArea({ id: null, name: '' });
+        setValueRoom({ id: null, name: '' });
     }
+
 
     const area = [
         {
@@ -428,22 +437,22 @@ function Rooms() {
                         <Row >
                             <Col span={6} className="item-form">
                                 <div className="acr-custom-select form-group">
-                                    <SelectCustom title="Thành phố" options={city} />
+                                    <SelectCustom title="Thành phố" value={valueCity} options={city} />
                                 </div>
                             </Col>
                             <Col span={6} className="item-form">
                                 <div className="acr-custom-select form-group">
-                                    <SelectCustom title="Giá cả / Đêm" options={prices} />
+                                    <SelectCustom title="Giá cả / Đêm" value={valuePrice} options={prices} />
                                 </div>
                             </Col>
                             <Col span={6} className="item-form">
                                 <div className="acr-custom-select form-group">
-                                    <SelectCustom title="Số phòng" options={rooms} />
+                                    <SelectCustom title="Số phòng" value={valueRoom} options={rooms} />
                                 </div>
                             </Col>
                             <Col span={6} className="item-form">
                                 <div className="acr-custom-select form-group">
-                                    <SelectCustom title="Diện tích" options={area} />
+                                    <SelectCustom title="Diện tích" value={valueArea} options={area} />
                                 </div>
                             </Col>
 
