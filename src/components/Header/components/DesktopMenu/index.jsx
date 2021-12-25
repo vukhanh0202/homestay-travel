@@ -40,7 +40,7 @@ function DesktopMenu({ disableTop }) {
             </ul>
         </div>
     );
-    const topStyle = shouldScrollHeader ? '' : '';
+    const topStyle = shouldScrollHeader ? 'disable' : '';
     return (
         <header className="header-section">
             <div className= {`top-nav ${topStyle}`}>
